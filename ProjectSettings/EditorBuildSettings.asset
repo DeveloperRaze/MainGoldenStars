@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/3 LevelSelectionScene.unity
+    guid: e5dccf2d53595c449a5109368ccad5e2
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1cfcb65c9ee790e41a4d260b21df6708,
       type: 2}
