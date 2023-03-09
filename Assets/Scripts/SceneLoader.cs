@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -9,10 +9,31 @@ public class SceneLoader : MonoBehaviour
     int currentSceneIndex;
     public float transitionTime = 3f;
 
+    [SerializeField] GameObject PauseButton;
+    [SerializeField] GameObject PlayButton;
+
+    [SerializeField] GameObject PauseText;
+
+
     public void ReloadGame()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        PauseText.SetActive(true);
+        PlayButton.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        PauseText.SetActive(false);
+        PlayButton.SetActive(false);
+        PauseButton.SetActive(true);
     }
 
     public void QuitGame()
