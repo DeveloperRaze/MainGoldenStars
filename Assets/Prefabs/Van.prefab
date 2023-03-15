@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 6637027679560967705}
   - component: {fileID: 6637027679560967706}
   - component: {fileID: 5751398651285775218}
+  - component: {fileID: 344294925}
   m_Layer: 0
   m_Name: Van
   m_TagString: Untagged
@@ -479,10 +480,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   control: 0
   RB: {fileID: 6637027679560967705}
-  motorForce: 1000
+  motorForce: 1250
   breakForce: 3000
-  maxSteerAngle: 15
-  maxSpeed: 12
+  maxSteerAngle: 40
+  maxSpeed: 25
   frontLeftWheelCollider: {fileID: 6637027680117136169}
   frontRightWheelCollider: {fileID: 6637027680287189509}
   backLeftWheelCollider: {fileID: 6637027680809426415}
@@ -491,6 +492,18 @@ MonoBehaviour:
   frontRightWheelTransform: {fileID: 6637027679561274998}
   backLeftWheelTransform: {fileID: 6637027679561203762}
   backRightWheelTransform: {fileID: 6637027679561217650}
+--- !u!114 &344294925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637027679560967708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdca5528c99c43bf73930fcba9442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6637027679560991830
 GameObject:
   m_ObjectHideFlags: 0

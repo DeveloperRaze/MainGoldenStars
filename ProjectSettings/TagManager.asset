@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawnable
+  - Number2
+  - Number3
+  - Number4
   layers:
   - Default
   - TransparentFX
