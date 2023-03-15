@@ -21,22 +21,19 @@ public class Collisions : MonoBehaviour
 
         //Level 1-2 (change to 2)
 
-        if (collision.gameObject.name == "3")
+        if (collision.gameObject.name == "2(Clone)")
         {
-            GetComponent<PuzzleScript>().nextLevel();
             Destroy(collision.gameObject);
 
         }
 
-        if (collision.gameObject.name == "3")
+        if (collision.gameObject.name == "3(Clone)")
         {
-            GetComponent<PuzzleScript>().nextLevel();
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "4")
+        if (collision.gameObject.name == "4(Clone)")
         {
-            GetComponent<PuzzleScript>().nextLevel();
             Destroy(collision.gameObject);        
         }
     }

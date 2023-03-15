@@ -30,7 +30,7 @@ public class PuzzleScript : MonoBehaviour
         //Consider late update/Fixed update? what is cheaper in terms of cost.
     }
 
-    public void nextLevel()
+    public void NextLevel()
     {
         currentLevel++;
     }
