@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class FaderScript : MonoBehaviour
 {
     [SerializeField] private CanvasGroup characterUIGroup;
-    [SerializeField] private bool fadeIn = false;
-    [SerializeField] private bool fadeOut = false;
+    [SerializeField] public bool fadeIn = false;
+    [SerializeField] public bool fadeOut = false;
 
     public void Start()
     {
         //Make Character text visible at start.
         ShowUI();
 
-        //Hides the Character text after 5 seconds.
-        Invoke(nameof(HideUI), 5);
+        //Hides the Character text after 3 seconds.
+        Invoke(nameof(HideUI), 3);
     }
 
     public void ShowUI()
@@ -28,7 +28,12 @@ public class FaderScript : MonoBehaviour
         fadeOut = true;
     }
 
-    private void Update()
+    public void Update()
+    {
+        FadeIn();
+    }
+
+    public void FadeIn()
     {
         //If fadeIn is true.
         if (fadeIn)
@@ -39,7 +44,7 @@ public class FaderScript : MonoBehaviour
                 //Fade alpha by Time.deltaTime.
                 characterUIGroup.alpha += Time.deltaTime;
                 //and if alpha is >=1
-                if (characterUIGroup.alpha >=1)
+                if (characterUIGroup.alpha >= 1)
                 {
                     //Stop the fade in effect.
                     fadeIn = false;
