@@ -13,7 +13,8 @@ public class PuzzleScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI characterText;
     [SerializeField] private TextMeshProUGUI ojectiveText;
 
-    public FaderScript faderScript;
+    [SerializeField] public bool fadeIn = false;
+        [SerializeField] public bool fadeOut = false;
 
     //Character text UI on the left side of screen.
     public Canvas CharacterCanvas;
@@ -22,55 +23,138 @@ public class PuzzleScript : MonoBehaviour
 
     //Current level player is on
     public float currentLevel = 1.0f;
-    float secondsPassed = 0f;
+    float SecondsPassed = 0f;
+    float DelayAmount = 1f;
+    protected float Timer;
+    public bool TimerOn = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         //Set text to story 1.
         characterText.text = "Can you find the number 2?";
+
+        //Make Character text visible at start.
+        ShowUI();
+
+        //Hides the Character text after 3 seconds.
+        Invoke(nameof(HideUI), 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Consider late update/Fixed update? what is cheaper in terms of cost.
+
         CharacterTexts();
+        FadeIn();
+
+        Debug.Log("SecondsPassed" + SecondsPassed);
+        //Set timer on to start counting.
+        if (TimerOn == true)
+        {
+            Timer += Time.deltaTime;
+        }
+        //If timer greater than 1 second, set to 0
+        if (Timer >= DelayAmount)
+        {
+            Timer = 0f;
+            SecondsPassed++;
+        }
+
+        //This is the amount of time (10 seconds) the text displays for before disappearing.
+        if (SecondsPassed >= 5)
+        {
+            HideUI();
+            SecondsPassed = 0;
+            TimerOn = false;
+        }
     }
 
+    //Show UI boolean true
+    public void ShowUI()
+    {
+        fadeIn = true;
+    }
+
+    //Hide UI boolean true
+    public void HideUI()
+    {
+        fadeOut = true;
+    }
+
+    //Called from collision script and activates on impact.
     public void NextLevel()
     {
         currentLevel++;
-        //show current level in console
-        Debug.Log("This is working");
+        TimerOn = true;
+        ShowUI();
     }
 
     public void CharacterTexts()
     {
 
-        if (currentLevel == 2)
+        if (currentLevel == 2f)
         {
             characterText.text = "Can you find the number 3?";
-            characterUIGroup.GetComponent<FaderScript>().ShowUI();
-
-            StartCoroutine(hideUI());
-
         }
 
-        if (currentLevel == 3)
+        if (currentLevel == 3f)
         {
             characterText.text = "Can you find the number 4?";
-            characterUIGroup.GetComponent<FaderScript>().ShowUI();
-            StartCoroutine(hideUI());
+        }
+
+        if (currentLevel == 4f)
+        {
+            characterText.text = "Can you find the number 5?";
         }
     }
 
-    IEnumerator hideUI()
+    public void FadeIn()
     {
-        yield return new WaitForSeconds(3);
-        faderScript.fadeIn = false;
-        faderScript.fadeOut = true;
+        //If fadeIn is true.
+        if (fadeIn)
+        {
+            //And the UI group is hidden.
+            if (characterUIGroup.alpha < 1)
+            {
+                //Fade alpha by Time.deltaTime.
+                characterUIGroup.alpha += Time.deltaTime;
+                //and if alpha is >=1
+                if (characterUIGroup.alpha >= 1)
+                {
+                    //Stop the fade in effect.
+                    fadeIn = false;
+                }
+            }
+        }
+
+        //If fadeOut is true.
+        if (fadeOut)
+        {
+            //And the UI group is visible.
+            if (characterUIGroup.alpha >= 0)
+            {
+                //Fade alpha - Time.deltaTime.
+                characterUIGroup.alpha -= Time.deltaTime;
+                //and if alpha is 0
+                if (characterUIGroup.alpha == 0)
+                {
+                    //stop the fade out effect.
+                    fadeOut = false;
+                }
+            }
+        }
+    }
+
+    public void DisplayWrongObjectText()
+    {
+        ShowUI();
+        TimerOn = true;
+
+        characterText.text = "Oops! That's not quite right. Try again.";
+
     }
 
     //Level 1-1

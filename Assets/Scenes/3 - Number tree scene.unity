@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 726979068}
   - component: {fileID: 726979070}
   - component: {fileID: 726979069}
+  - component: {fileID: 726979071}
   m_Layer: 5
   m_Name: Stars_Icon
   m_TagString: Untagged
@@ -1511,7 +1512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -223.7, y: -7.1}
+  m_AnchoredPosition: {x: -190.5, y: -11.1}
   m_SizeDelta: {x: 126, y: 49}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &726979069
@@ -1552,6 +1553,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726979067}
   m_CullTransparentMesh: 1
+--- !u!95 &726979071
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726979067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95f3db5ed280b36448a7887f0d4f7c2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &816578081
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,10 +3184,12 @@ MonoBehaviour:
   characterUIGroup: {fileID: 245615184}
   characterText: {fileID: 645220724}
   ojectiveText: {fileID: 1232864613}
-  faderScript: {fileID: 245615185}
+  fadeIn: 0
+  fadeOut: 0
   CharacterCanvas: {fileID: 1822822349}
   UICanvas: {fileID: 1656792574}
   currentLevel: 1
+  TimerOn: 0
 --- !u!1 &1656792569
 GameObject:
   m_ObjectHideFlags: 0

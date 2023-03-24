@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/1 MainMenuScene.unity
     guid: c989b5433fdfbbd46bdfeb7ef60d22c0
   - enabled: 1
-    path: Assets/Scenes/3 LevelSelectionScene.unity
+    path: Assets/Scenes/2 - Level selection.unity
     guid: e5dccf2d53595c449a5109368ccad5e2
   - enabled: 1
-    path: Assets/Scenes/4 NumbertreeScene.unity
+    path: Assets/Scenes/3 - Number tree scene.unity
     guid: c5fc3eb0da78e9c449a333f922466acd
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1cfcb65c9ee790e41a4d260b21df6708,
