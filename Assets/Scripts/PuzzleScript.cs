@@ -21,6 +21,11 @@ public class PuzzleScript : MonoBehaviour
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
 
+    public TriggerTree triggerTree;
+
+    public Camera mainCamera;
+    public Camera secondCamera;
+
     //Character text UI on the left side of screen.
     public Canvas CharacterCanvas;
     //Home, pause button, level star count top right corner of screen.
@@ -39,6 +44,10 @@ public class PuzzleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Enable main camera.
+        mainCamera.enabled = true;
+        secondCamera.enabled = false;
+
         //Set text to story
         characterText.text = "Can you find the number 1?";
 
@@ -128,8 +137,11 @@ public class PuzzleScript : MonoBehaviour
 
         if (currentLevel == 4f)
         {
-            Star3.SetActive(true);
+            mainCamera.enabled = false;
+            secondCamera.enabled = true;
 
+            triggerTree.SetTrigger();
+            Star3.SetActive(true);
             characterText.text = "Well done! Let's go to the next level.";
         }
     }

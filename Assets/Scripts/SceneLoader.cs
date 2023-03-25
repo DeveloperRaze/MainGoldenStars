@@ -66,6 +66,5 @@ public class SceneLoader : MonoBehaviour
         //Load scene
         SceneManager.LoadScene(levelIndex);
     }
-
 }
 
