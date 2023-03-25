@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 6637027679560967706}
   - component: {fileID: 5751398651285775218}
   - component: {fileID: 344294925}
+  - component: {fileID: 1638866741}
   m_Layer: 0
   m_Name: Van
   m_TagString: Untagged
@@ -480,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   control: 0
   RB: {fileID: 6637027679560967705}
-  motorForce: 1250
+  motorForce: 3000
   breakForce: 3000
   maxSteerAngle: 40
   maxSpeed: 25
@@ -504,6 +505,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0fdca5528c99c43bf73930fcba9442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1638866741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637027679560967708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a98c1bb5dc5134e89f3b1909b71d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterUIGroup: {fileID: 0}
+  ObjectiveUIGroup: {fileID: 0}
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
+  characterText: {fileID: 0}
+  ojectiveText: {fileID: 0}
+  fadeIn: 0
+  fadeOut: 0
+  CharacterCanvas: {fileID: 0}
+  UICanvas: {fileID: 0}
+  currentLevel: 1
+  TimerOn: 0
 --- !u!1 &6637027679560991830
 GameObject:
   m_ObjectHideFlags: 0

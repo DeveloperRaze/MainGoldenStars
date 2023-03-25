@@ -9,12 +9,17 @@ public class PuzzleScript : MonoBehaviour
     //If vehicle has tipped or inactive
     //This script has been attached to the car because of the collision script needing to access it?
     [SerializeField] private CanvasGroup characterUIGroup;
+    [SerializeField] private CanvasGroup ObjectiveUIGroup;
+
+    [SerializeField] private GameObject Star1;
+    [SerializeField] private GameObject Star2;
+    [SerializeField] private GameObject Star3;
 
     [SerializeField] private TextMeshProUGUI characterText;
     [SerializeField] private TextMeshProUGUI ojectiveText;
 
     [SerializeField] public bool fadeIn = false;
-        [SerializeField] public bool fadeOut = false;
+    [SerializeField] public bool fadeOut = false;
 
     //Character text UI on the left side of screen.
     public Canvas CharacterCanvas;
@@ -28,19 +33,24 @@ public class PuzzleScript : MonoBehaviour
     protected float Timer;
     public bool TimerOn = false;
 
+    public Color textColor;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
-        //Set text to story 1.
-        characterText.text = "Can you find the number 2?";
+        //Set text to story
+        characterText.text = "Can you find the number 1?";
 
         //Make Character text visible at start.
         ShowUI();
 
         //Hides the Character text after 3 seconds.
         Invoke(nameof(HideUI), 5);
+
+        //Set the color to match the active game object.
+        ojectiveText.color = Color.red;
+
     }
 
     // Update is called once per frame
@@ -51,7 +61,7 @@ public class PuzzleScript : MonoBehaviour
         FadeIn();
 
         Debug.Log("SecondsPassed" + SecondsPassed);
-        //Set timer on to start counting.
+        //If timer on then start counting.
         if (TimerOn == true)
         {
             Timer += Time.deltaTime;
@@ -63,7 +73,7 @@ public class PuzzleScript : MonoBehaviour
             SecondsPassed++;
         }
 
-        //This is the amount of time (10 seconds) the text displays for before disappearing.
+        //This is how long the text displays before disappearing (10 seconds) .
         if (SecondsPassed >= 5)
         {
             HideUI();
@@ -72,21 +82,22 @@ public class PuzzleScript : MonoBehaviour
         }
     }
 
-    //Show UI boolean true
+    //Show UI boolean (true)
     public void ShowUI()
     {
         fadeIn = true;
     }
 
-    //Hide UI boolean true
+    //Hide UI boolean (true)
     public void HideUI()
     {
         fadeOut = true;
     }
 
-    //Called from collision script and activates on impact.
+    //Called from collision script attached to van and activates on impact.
     public void NextLevel()
     {
+        //increase level, turn on timer and show UI.
         currentLevel++;
         TimerOn = true;
         ShowUI();
@@ -94,20 +105,32 @@ public class PuzzleScript : MonoBehaviour
 
     public void CharacterTexts()
     {
-
+        //Text based on level player is on.
         if (currentLevel == 2f)
         {
-            characterText.text = "Can you find the number 3?";
+            //Award the first star
+            Star1.SetActive(true);
+            //Set text to second objective
+            characterText.text = "Can you find the number 2?";
+            ojectiveText.text = "2";
+            ojectiveText.color = Color.yellow;
+
         }
 
         if (currentLevel == 3f)
         {
-            characterText.text = "Can you find the number 4?";
+            Star2.SetActive(true);
+            characterText.text = "Can you find the number 3?";
+            ojectiveText.text = "3";
+            ojectiveText.color = Color.blue;
+
         }
 
         if (currentLevel == 4f)
         {
-            characterText.text = "Can you find the number 5?";
+            Star3.SetActive(true);
+
+            characterText.text = "Well done! Let's go to the next level.";
         }
     }
 
@@ -153,7 +176,7 @@ public class PuzzleScript : MonoBehaviour
         ShowUI();
         TimerOn = true;
 
-        characterText.text = "Oops! That's not quite right. Try again.";
+        characterText.text = "Oops! Try again.";
 
     }
 

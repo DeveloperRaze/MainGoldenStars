@@ -10,13 +10,19 @@ public class Collisions : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         //Level 1-1 (Change to 1)
-        //Check for a match with the specified name on any GameObject that collides with your GameObject
+        //Check for a match with the specified name on any GameObject that collides with Vehicle
 
-        if (collision.gameObject.name == "2(Clone)" && currentLevel == 1)
+        if (collision.gameObject.name == "1(Clone)" && currentLevel == 1)
         {
             //If correct object was destroyed then move to next object.
             GetComponent<PuzzleScript>().NextLevel();
             currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "2(Clone)" && currentLevel == 1)
+        {
+            GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
         }
 
@@ -26,22 +32,14 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "4(Clone)" && currentLevel == 1)
+        // Level 1-2
+        if (collision.gameObject.name == "1(Clone)" && currentLevel == 2)
         {
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
-
         }
-
-        // Level 1-2
 
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 2)
-        {
-            GetComponent<PuzzleScript>().DisplayWrongObjectText();
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.name == "3(Clone)" && currentLevel == 2)
         {
             //If correct object was destroyed then move to next object.
             GetComponent<PuzzleScript>().NextLevel();
@@ -49,13 +47,18 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "4(Clone)" && currentLevel == 2)
+        if (collision.gameObject.name == "3(Clone)" && currentLevel == 2)
         {
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
         }
 
         // Level 1-3
+        if (collision.gameObject.name == "1(Clone)" && currentLevel == 3)
+        {
+            GetComponent<PuzzleScript>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
 
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 3)
         {
@@ -63,13 +66,8 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "3(Clone)" && currentLevel == 2)
-        {
-            GetComponent<PuzzleScript>().DisplayWrongObjectText();
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.name == "4(Clone)" && currentLevel == 2)
+        //This will finish level 1-1, moving on to level 1-2. 
+        if (collision.gameObject.name == "3(Clone)" && currentLevel == 3)
         {
             //If correct object was destroyed then move to next object.
             GetComponent<PuzzleScript>().NextLevel();
