@@ -4,25 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PuzzleScript : MonoBehaviour
+public class Puzzlescript2 : MonoBehaviour
 {
-    //If vehicle has tipped or inactive
+    //If vehicle has tipped or inactive.
     //This script has been attached to the car because of the collision script needing to access it?
+
     [SerializeField] private CanvasGroup characterUIGroup;
     [SerializeField] private CanvasGroup ObjectiveUIGroup;
 
+    //Stars awarded to player.
     [SerializeField] private GameObject Star1;
     [SerializeField] private GameObject Star2;
     [SerializeField] private GameObject Star3;
 
+    //Character and Objective texts.
     [SerializeField] private TextMeshProUGUI characterText;
     [SerializeField] private TextMeshProUGUI ojectiveText;
 
+    //Fade in/Out for texts.
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
-
+    //Tree Object.
     public TriggerTree triggerTree;
-
+    //Camera Objects.
     public Camera mainCamera;
     public Camera secondCamera;
 
@@ -31,17 +35,20 @@ public class PuzzleScript : MonoBehaviour
     //Home, pause button, level star count top right corner of screen.
     public Canvas UICanvas;
 
-    //Current level player is on
-    public float currentLevel = 1.0f;
+    //Current level player is on.
+    public float currentLevel = 4.0f;
+    //Time in seconds = 0.
     float SecondsPassed = 0f;
+    //Delay of 1 second.
     float DelayAmount = 1f;
+    //Timer Float.
     protected float Timer;
+    //Timer bool.
     public bool TimerOn = false;
-
+    //Text Colour reference.
     public Color textColor;
-
+    //SceneLoader.
     public SceneLoader SceneLoader;
-
 
     // Start is called before the first frame update
     void Start()
@@ -50,8 +57,8 @@ public class PuzzleScript : MonoBehaviour
         mainCamera.enabled = true;
         secondCamera.enabled = false;
 
-        //Set text to story
-        characterText.text = "Can you find the number 1?";
+        //Set text to story.
+        characterText.text = "Can you find the number 4?";
 
         //Make Character text visible at start.
         ShowUI();
@@ -61,13 +68,11 @@ public class PuzzleScript : MonoBehaviour
 
         //Set the color to match the active game object.
         ojectiveText.color = Color.red;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         CharacterTexts();
         FadeIn();
 
@@ -84,7 +89,7 @@ public class PuzzleScript : MonoBehaviour
             SecondsPassed++;
         }
 
-        //This is how long the text displays before disappearing (10 seconds) .
+        //This is how long the text displays before disappearing (10 seconds).
         if (SecondsPassed >= 5)
         {
             HideUI();
@@ -117,33 +122,49 @@ public class PuzzleScript : MonoBehaviour
     public void CharacterTexts()
     {
         //Text based on level player is on.
-        if (currentLevel == 2f)
+        if (currentLevel == 4f)
+        {
+
+            //Set text to second objective
+            characterText.text = "Can you find the number 4?";
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "4";
+            ojectiveText.color = Color.magenta;
+        }
+
+        if (currentLevel == 5f)
         {
             //Award the first star
             Star1.SetActive(true);
-            //Set text to second objective
-            characterText.text = "Can you find the number 2?";
-            ojectiveText.text = "2";
-            ojectiveText.color = Color.yellow;
+
+            characterText.text = "Can you find the number 5?";
+
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "5";
+            ojectiveText.color = Color.black;
         }
 
-        if (currentLevel == 3f)
+        if (currentLevel == 6f)
         {
             Star2.SetActive(true);
-            characterText.text = "Can you find the number 3?";
-            ojectiveText.text = "3";
+
+            characterText.text = "Can you find the number 6?";
+
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "6";
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 4f)
+        if (currentLevel == 7f)
         {
             mainCamera.enabled = false;
             secondCamera.enabled = true;
 
+            //Objective UI changes to match the objective.
             triggerTree.SetTrigger();
             Star3.SetActive(true);
 
-            characterText.text = "Well done! Let's go to the next level.";
+            characterText.text = "Well done! We can move on to the next level.";
             SceneLoader.NextScene();
         }
     }
@@ -184,21 +205,11 @@ public class PuzzleScript : MonoBehaviour
             }
         }
     }
-
+    //If Player crashes in to wrong object, show text as wrong object.
     public void DisplayWrongObjectText()
     {
         ShowUI();
         TimerOn = true;
-
         characterText.text = "Oops! Try again.";
-
     }
-
-    //Level 1-1
-
-    //If 1 is destroyed, get a star
-    //If 1 is completed, set complete
-    //If 1 is completed, move to next objective
-
-    //Change text instruction
 }
