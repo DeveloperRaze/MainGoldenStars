@@ -40,6 +40,8 @@ public class PuzzleScript : MonoBehaviour
 
     public Color textColor;
 
+    public SceneLoader SceneLoader;
+
 
     // Start is called before the first frame update
     void Start()
@@ -123,7 +125,6 @@ public class PuzzleScript : MonoBehaviour
             characterText.text = "Can you find the number 2?";
             ojectiveText.text = "2";
             ojectiveText.color = Color.yellow;
-
         }
 
         if (currentLevel == 3f)
@@ -132,7 +133,6 @@ public class PuzzleScript : MonoBehaviour
             characterText.text = "Can you find the number 3?";
             ojectiveText.text = "3";
             ojectiveText.color = Color.blue;
-
         }
 
         if (currentLevel == 4f)
@@ -142,7 +142,9 @@ public class PuzzleScript : MonoBehaviour
 
             triggerTree.SetTrigger();
             Star3.SetActive(true);
+
             characterText.text = "Well done! Let's go to the next level.";
+            SceneLoader.NextScene();
         }
     }
 
