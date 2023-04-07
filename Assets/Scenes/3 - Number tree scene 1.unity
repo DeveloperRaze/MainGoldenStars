@@ -362,8 +362,18 @@ PrefabInstance:
       objectReference: {fileID: 245615184}
     - target: {fileID: 5751398651285775218, guid: 611e6aa531571624cbaf71b31c2c8915,
         type: 3}
+      propertyPath: control
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751398651285775218, guid: 611e6aa531571624cbaf71b31c2c8915,
+        type: 3}
       propertyPath: maxSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751398651285775218, guid: 611e6aa531571624cbaf71b31c2c8915,
+        type: 3}
+      propertyPath: maxSteerAngle
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6637027679560967708, guid: 611e6aa531571624cbaf71b31c2c8915,
         type: 3}
@@ -373,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
         type: 3}
@@ -855,7 +865,7 @@ PrefabInstance:
     - target: {fileID: 368285940698362842, guid: c0766454b16ed814e937a0f395026e00,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 368285940698362842, guid: c0766454b16ed814e937a0f395026e00,
         type: 3}
@@ -1121,9 +1131,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 465, y: 261.5}
-  m_SizeDelta: {x: 930, y: 523}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &390669792
 GameObject:
@@ -2335,7 +2345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -117, y: 12}
+  m_AnchoredPosition: {x: -114, y: 28}
   m_SizeDelta: {x: 537, y: 930}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1175127915
@@ -2449,7 +2459,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 6d3a9e42e4546d54ba369bc29432caf8, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2638,7 +2648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -11, y: 12}
+  m_AnchoredPosition: {x: 0, y: 28}
   m_SizeDelta: {x: 491, y: 930}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1284208641
@@ -2752,7 +2762,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: d6af59409acaa534c9cce28d4d979f34, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3067,7 +3077,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1444673881}
   - component: {fileID: 1444673880}
-  - component: {fileID: 1444673879}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3075,14 +3084,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1444673879
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444673878}
-  m_Enabled: 1
 --- !u!20 &1444673880
 Camera:
   m_ObjectHideFlags: 0
@@ -3238,7 +3239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 155.4, y: 10.100006}
+  m_AnchoredPosition: {x: 146, y: 10.100006}
   m_SizeDelta: {x: 210.6395, y: 201.9448}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1632529227
@@ -3258,7 +3259,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 77945668}
           m_TargetAssemblyTypeName: CarController, Assembly-CSharp
           m_MethodName: SteerInput
           m_Mode: 4
@@ -3274,7 +3275,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 77945668}
           m_TargetAssemblyTypeName: CarController, Assembly-CSharp
           m_MethodName: SteerInput
           m_Mode: 4
@@ -3350,7 +3351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22898d39707f8444a947726707ae809e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1124fc356861741bfb0c8ab24719ceb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3495,7 +3496,7 @@ PrefabInstance:
     - target: {fileID: 5232089241635523032, guid: 313dd3897f424514c80848b70cfc1150,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5232089241635523032, guid: 313dd3897f424514c80848b70cfc1150,
         type: 3}
@@ -3755,7 +3756,7 @@ PrefabInstance:
     - target: {fileID: 2890634002950391236, guid: fafbbc2dd6ba6c5409bb6c6da2e654b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2890634002950391236, guid: fafbbc2dd6ba6c5409bb6c6da2e654b0,
         type: 3}
@@ -3883,7 +3884,7 @@ PrefabInstance:
     - target: {fileID: 896537542042283411, guid: 84933532bc20aa64c8fb2451711c42be,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 896537542042283411, guid: 84933532bc20aa64c8fb2451711c42be,
         type: 3}
@@ -3995,7 +3996,6 @@ GameObject:
   - component: {fileID: 1969676216}
   - component: {fileID: 1969676219}
   - component: {fileID: 1969676218}
-  - component: {fileID: 1969676217}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -4018,19 +4018,6 @@ Transform:
   m_Father: {fileID: 77945669}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1969676217
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969676215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1969676218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4191,7 +4178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.9, y: 10.1}
+  m_AnchoredPosition: {x: 10.900024, y: 10.100006}
   m_SizeDelta: {x: 210.6395, y: 201.9448}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2137000008
@@ -4211,7 +4198,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 77945668}
           m_TargetAssemblyTypeName: CarController, Assembly-CSharp
           m_MethodName: SteerInput
           m_Mode: 4
@@ -4227,7 +4214,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 77945668}
           m_TargetAssemblyTypeName: CarController, Assembly-CSharp
           m_MethodName: SteerInput
           m_Mode: 4
@@ -4303,7 +4290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22898d39707f8444a947726707ae809e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 564374dec2eb54426961c56c9d32598d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
