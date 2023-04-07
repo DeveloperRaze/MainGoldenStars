@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38810045, g: 0.7278148, b: 0.7324987, a: 1}
+  m_IndirectSpecularColor: {r: 0.3881003, g: 0.7278148, b: 0.73249865, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can you find the number 1?
+  m_text: Can you find the number 7?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57a7662975357d84ca1355c16f0643c4, type: 2}
   m_sharedMaterial: {fileID: 7765487874042894707, guid: 57a7662975357d84ca1355c16f0643c4,
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.05
+  m_fontSize: 51.65
   m_fontSizeBase: 49.89
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2730,7 +2730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57a7662975357d84ca1355c16f0643c4, type: 2}
   m_sharedMaterial: {fileID: 7765487874042894707, guid: 57a7662975357d84ca1355c16f0643c4,
