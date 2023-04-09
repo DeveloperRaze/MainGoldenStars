@@ -11,7 +11,6 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject PlayButton;
-
     [SerializeField] GameObject PauseText;
 
 
@@ -53,6 +52,10 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void ReturnToLevelSelect()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
     // to delay the next scene, start Coroutine
 
     IEnumerator LoadLevel(int levelIndex)

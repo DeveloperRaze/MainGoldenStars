@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1 MainMenuScene.unity
+    path: Assets/Scenes/MainMenuScene.unity
     guid: c989b5433fdfbbd46bdfeb7ef60d22c0
   - enabled: 1
-    path: Assets/Scenes/2 - Level selection.unity
+    path: Assets/Scenes/Level selection.unity
     guid: e5dccf2d53595c449a5109368ccad5e2
   - enabled: 1
-    path: Assets/Scenes/3 - Number tree scene 1.unity
+    path: Assets/Scenes/Number tree scene 1.unity
     guid: 85f9e12a3ee789743bd9c9d95400ba56
   - enabled: 1
-    path: Assets/Scenes/4 - Number tree scene 2.unity
+    path: Assets/Scenes/Number tree scene 2.unity
     guid: d2746f8ce7aab734ca92402bb5fc1c15
   - enabled: 1
-    path: Assets/Scenes/5 - Number tree scene 3.unity
+    path: Assets/Scenes/Number tree scene 3.unity
     guid: c946a319b06def046b7d60b3fc381e97
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1cfcb65c9ee790e41a4d260b21df6708,
