@@ -6,10 +6,10 @@ using TMPro;
 
 public class PuzzleScript : MonoBehaviour
 {
-    //Bug:    //Need Vehicle reset If vehicle has tipped
     //Bug:    //If 3 is destroyed before 2, then instantiate another 3. 
-
+    //We need to input a command to level select scene to award stars accordingly.
     //This script has been attached to the car because of the collision script needing to access it?
+
     [SerializeField] private CanvasGroup characterUIGroup;
     [SerializeField] private CanvasGroup ObjectiveUIGroup;
 
@@ -50,6 +50,8 @@ public class PuzzleScript : MonoBehaviour
     public Color textColor;
     //SceneLoader.
     public SceneLoader SceneLoader;
+
+    public float transitionTime = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -146,15 +148,17 @@ public class PuzzleScript : MonoBehaviour
 
         if (currentLevel == 4f)
         {
+            Star3.SetActive(true);
             mainCamera.enabled = false;
             secondCamera.enabled = true;
-
-            //Objective UI changes to match the objective.
-            triggerTree.SetTrigger();
-            Star3.SetActive(true);
-
             characterText.text = "Well done! Let's go to the next level.";
-            SceneLoader.NextScene();
+
+            triggerTree.SetTrigger();
+
+            if (SecondsPassed >= 4f)
+            {
+                SceneLoader.NextScene();
+            }
         }
     }
 

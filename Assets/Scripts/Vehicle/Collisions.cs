@@ -11,7 +11,7 @@ public class Collisions : MonoBehaviour
     public void Start()
     {
         GetComponent<Puzzlescript2>();
-        currentLevel = GetComponent<Puzzlescript2>().currentLevel;
+        //currentLevel = GetComponent<Puzzlescript2>().currentLevel;
     }
 
     //Detect collisions between the GameObjects with Colliders attached

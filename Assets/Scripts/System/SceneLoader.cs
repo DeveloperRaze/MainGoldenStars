@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    // I need to work out how to load Level select scene regardless of what scene the player is on. 
+
     public Animator transition;
     int currentSceneIndex;
     public float transitionTime = 3f;
@@ -12,7 +14,6 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject PlayButton;
     [SerializeField] GameObject PauseText;
-
 
     public void ReloadGame()
     {
@@ -52,6 +53,7 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    //This will only work for scene 1-2 back to 1-1. 
     public void ReturnToLevelSelect()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
