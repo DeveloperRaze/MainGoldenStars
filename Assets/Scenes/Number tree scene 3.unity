@@ -2252,6 +2252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 344294925, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
+      propertyPath: currentLevel
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1638866741, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
       propertyPath: Star1
       value: 
@@ -2375,7 +2379,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1638866741, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
 --- !u!114 &1121869179 stripped
 MonoBehaviour:
@@ -2383,7 +2388,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1121869178}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1290456180}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38d8230a14600f144989f950cb62e757, type: 3}
@@ -2814,6 +2819,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232864611}
   m_CullTransparentMesh: 1
+--- !u!1 &1290456180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6637027679560967708, guid: 343f49587de395b459bfbc8522be60e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1121869178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1290456183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290456180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ab64cb8655d5a4480207fc98789c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterUIGroup: {fileID: 245615184}
+  ObjectiveUIGroup: {fileID: 1656792571}
+  Star1: {fileID: 378099697}
+  Star2: {fileID: 348645171}
+  Star3: {fileID: 2062882021}
+  characterText: {fileID: 645220724}
+  ojectiveText: {fileID: 1232864613}
+  fadeIn: 0
+  fadeOut: 0
+  triggerTree: {fileID: 1162338149}
+  mainCamera: {fileID: 427435756}
+  secondCamera: {fileID: 1444673880}
+  CharacterCanvas: {fileID: 1822822349}
+  UICanvas: {fileID: 1656792574}
+  currentLevel: 7
+  TimerOn: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  SceneLoader: {fileID: 1805759789}
 --- !u!1 &1316408631
 GameObject:
   m_ObjectHideFlags: 0

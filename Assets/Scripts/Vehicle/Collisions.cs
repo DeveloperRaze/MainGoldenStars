@@ -6,7 +6,8 @@ public class Collisions : MonoBehaviour
 {
     public float currentLevel = 1.0f;
 
-    private Puzzlescript2 Script2;
+    public Puzzlescript2 Script2;
+    public PuzzleScript3 Script3;
 
     public void Start()
     {
@@ -145,6 +146,115 @@ public class Collisions : MonoBehaviour
         {
             //If correct object was destroyed then move to next object.
             GetComponent<Puzzlescript2>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        // Level 1-7
+        if (collision.gameObject.name == "7" && currentLevel == 7)
+        {
+            //If correct object was destroyed then move to next object.
+            GetComponent<PuzzleScript3>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "8" && currentLevel == 7)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "9" && currentLevel == 7)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "10" && currentLevel == 7)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        //Level 1-8
+        if (collision.gameObject.name == "7" && currentLevel == 8)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "8" && currentLevel == 8)
+        {
+            //If correct object was destroyed then move to next object.
+            GetComponent<PuzzleScript3>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "9" && currentLevel == 8)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "10" && currentLevel == 8)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        //Level 1-9
+        if (collision.gameObject.name == "7" && currentLevel == 9)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "8" && currentLevel == 9)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "9" && currentLevel == 9)
+        {
+            //If correct object was destroyed then move to next object.
+            GetComponent<PuzzleScript3>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "10" && currentLevel == 9)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        //Level 1-10
+        if (collision.gameObject.name == "7" && currentLevel == 10)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "8" && currentLevel == 10)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "9" && currentLevel == 10)
+        {
+            GetComponent<PuzzleScript3>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "10" && currentLevel == 10)
+        {
+            //  Either end scene or continue to 1-11?
+            //If correct object was destroyed then move to next object.
+            GetComponent<PuzzleScript3>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
         }
