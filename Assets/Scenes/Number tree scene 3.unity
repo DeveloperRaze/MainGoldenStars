@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 4088131734496942585, guid: 25eb5ae370bbfaa42b270e1ef1de1ee1,
         type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 4088131734496942588, guid: 25eb5ae370bbfaa42b270e1ef1de1ee1,
         type: 3}
@@ -2095,7 +2095,7 @@ PrefabInstance:
     - target: {fileID: 5645749820093198549, guid: 4efa3fdc1596d7640b85df32c77b628e,
         type: 3}
       propertyPath: m_Name
-      value: 10
+      value: 10(Clone)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa3fdc1596d7640b85df32c77b628e, type: 3}
@@ -2253,6 +2253,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 344294925, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1495393624}
+    - target: {fileID: 344294925, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
       propertyPath: currentLevel
       value: 7
       objectReference: {fileID: 0}
@@ -2318,6 +2322,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSteerAngle
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637027679560967706, guid: 343f49587de395b459bfbc8522be60e1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.0956616
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637027679560967706, guid: 343f49587de395b459bfbc8522be60e1,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0094304085
       objectReference: {fileID: 0}
     - target: {fileID: 6637027679560967708, guid: 343f49587de395b459bfbc8522be60e1,
         type: 3}
@@ -2424,7 +2438,7 @@ PrefabInstance:
     - target: {fileID: 2890634002950391236, guid: 81895d9da12a9eb47bfdf60230b840e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.315075
+      value: 93.2
       objectReference: {fileID: 0}
     - target: {fileID: 2890634002950391236, guid: 81895d9da12a9eb47bfdf60230b840e1,
         type: 3}
@@ -3402,7 +3416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1495393624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3419,6 +3433,7 @@ MonoBehaviour:
   - {fileID: 5731138165752323051, guid: 3b381fc0c8a16734fb6fd22dad907a2f, type: 3}
   - {fileID: 7806412575950939702, guid: 2f2ac435dfc6c244e9a9845db5ba7390, type: 3}
   - {fileID: 1213667404437936104, guid: 86d0cf9e90e75624694540af7823a9ad, type: 3}
+  Items: 0
 --- !u!4 &1495393625
 Transform:
   m_ObjectHideFlags: 0
@@ -4202,7 +4217,7 @@ PrefabInstance:
     - target: {fileID: 1745879880452284304, guid: 608d2350ebfcdce478f835ea58fb8f0f,
         type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 7009313069006302645, guid: 608d2350ebfcdce478f835ea58fb8f0f,
         type: 3}
@@ -4271,7 +4286,7 @@ PrefabInstance:
     - target: {fileID: 3679757594244220903, guid: 2db00680253cf0049aaee648ff5075b9,
         type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 9081400656561097161, guid: 2db00680253cf0049aaee648ff5075b9,
         type: 3}

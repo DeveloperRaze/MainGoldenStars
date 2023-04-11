@@ -475,6 +475,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 344294925, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1495393624}
     - target: {fileID: 1638866741, guid: 343f49587de395b459bfbc8522be60e1, type: 3}
       propertyPath: Star1
       value: 
@@ -537,6 +541,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSteerAngle
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637027679560967706, guid: 343f49587de395b459bfbc8522be60e1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.0956616
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637027679560967706, guid: 343f49587de395b459bfbc8522be60e1,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0094304085
       objectReference: {fileID: 0}
     - target: {fileID: 6637027679560967708, guid: 343f49587de395b459bfbc8522be60e1,
         type: 3}
@@ -1522,7 +1536,7 @@ PrefabInstance:
     - target: {fileID: 5742847022485418443, guid: a76e55f40e479e249ac70a64aebbbaac,
         type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4(Clone)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a76e55f40e479e249ac70a64aebbbaac, type: 3}
@@ -3327,7 +3341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1495393624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,6 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterObjects: []
+  Items: 0
 --- !u!4 &1495393625
 Transform:
   m_ObjectHideFlags: 0
@@ -3695,7 +3710,7 @@ PrefabInstance:
     - target: {fileID: 2890634002950391236, guid: 81895d9da12a9eb47bfdf60230b840e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.315075
+      value: 92.1
       objectReference: {fileID: 0}
     - target: {fileID: 2890634002950391236, guid: 81895d9da12a9eb47bfdf60230b840e1,
         type: 3}
@@ -3808,7 +3823,7 @@ PrefabInstance:
     - target: {fileID: 300112145798192268, guid: 3a75c535c08eb7c4589eef6d998f7c28,
         type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 3003397843897544751, guid: 3a75c535c08eb7c4589eef6d998f7c28,
         type: 3}
@@ -4214,7 +4229,7 @@ PrefabInstance:
     - target: {fileID: 4530950531533741404, guid: 49f25022d31fe714095dac5e5efc0cf9,
         type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5(Clone)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f25022d31fe714095dac5e5efc0cf9, type: 3}
