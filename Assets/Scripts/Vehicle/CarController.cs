@@ -53,6 +53,7 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         //Get input controls and update wheel transforms
         GetInput();
         UpdateWheels();
@@ -62,6 +63,7 @@ public class CarController : MonoBehaviour
 
     void LateUpdate() 
     {
+
         //Handle engine and steering
         HandleMotor();
         HandleSteering();
@@ -70,8 +72,11 @@ public class CarController : MonoBehaviour
 
     public void MoveInput(float input)
     {
+        FindObjectOfType<AudioManager>().Play("Gas");
+
         //Handle forward/backward input
         verticalInput = input;
+
     }
 
     public void SteerInput(float input)

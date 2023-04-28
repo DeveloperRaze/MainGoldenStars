@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using System;
+
 
 public class GameSessionHandler : MonoBehaviour
 {
@@ -10,7 +13,8 @@ public class GameSessionHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("Theme");
+
     }
 
     // Update is called once per frame
@@ -18,4 +22,5 @@ public class GameSessionHandler : MonoBehaviour
     {
         Debug.Log("StarCount" + StarCount);
     }
+
 }

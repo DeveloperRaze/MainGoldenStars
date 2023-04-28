@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8111966358976803264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8620438865877208744}
+  - component: {fileID: 6025367462891649354}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8620438865877208744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111966358976803264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.44225, y: 44.33319, z: -129.56686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6025367462891649354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8111966358976803264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c833fd34146de44b8696dcd26b86c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
+    volume: 0.225
+    pitch: 0
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: CarStart
+    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: CarGo
+    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: CarStop
+    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: CarIdle
+    clip: {fileID: 8300000, guid: 766ace4d629f1a94cac228ba91181ce5, type: 3}
+    volume: 1
+    pitch: 0.1
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
