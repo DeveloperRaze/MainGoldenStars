@@ -67,5 +67,48 @@ public class SpawnObject : MonoBehaviour
             //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
             Instantiate(letterObjects[2], randomSpawnPosition, Quaternion.identity);
         }
+
+        if (Items == 3)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[3], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 4)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[4], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 5)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[5], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 6)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[6], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 7)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[7], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 8)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[8], randomSpawnPosition, Quaternion.identity);
+        }
+
+        if (Items == 9)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[9], randomSpawnPosition, Quaternion.identity);
+        }
+
     }
 }

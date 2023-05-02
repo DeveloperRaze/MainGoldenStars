@@ -48,6 +48,7 @@ public class SceneLoader : MonoBehaviour
     // Triggers for Orchard 1 & 2.
     private void OnTriggerEnter(Collider other)
     {
+        FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
         NextScene();
     }
     //Next Scene
@@ -56,13 +57,13 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    //This will only work for scene 1-2 back to 1-1. 
+    //
     public void ReturnToLevelSelect()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        SceneManager.LoadScene("2 Level selection");
     }
-    // to delay the next scene, start Coroutine
 
+    // to delay the next scene, start Coroutine
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation effect

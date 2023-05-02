@@ -16,14 +16,15 @@ public class LevelSelectButtonScript : MonoBehaviour
 
     public void ShowCanvas()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         LevelSelectCanvas.enabled = true;
         SceneLoader.PauseGame();
     }
 
     public void HideCanvas()
     {
+        FindObjectOfType<AudioManager>().Play("ExitButton");
         LevelSelectCanvas.enabled = false;
         SceneLoader.ResumeGame();
-
     }
 }

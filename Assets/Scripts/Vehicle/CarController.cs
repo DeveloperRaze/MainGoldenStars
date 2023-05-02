@@ -72,7 +72,6 @@ public class CarController : MonoBehaviour
 
     public void MoveInput(float input)
     {
-        FindObjectOfType<AudioManager>().Play("Gas");
 
         //Handle forward/backward input
         verticalInput = input;

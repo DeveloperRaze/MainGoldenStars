@@ -21,6 +21,12 @@ public class GoldenStars_ReadMe : MonoBehaviour
     //Textures - https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-textures-204742
 
 
+    //Images
+    //2d Tree https://www.pngmart.com/image/323471. Attribution to [url=https://www.pngmart.com/image/323471
+    //2D Tree PNG Photos[/url] <a href=https://www.pngmart.com/image/323471 target="_blank">2D Tree PNG Photos</a>
+
+
+
     //Game Sounds
     //
     //

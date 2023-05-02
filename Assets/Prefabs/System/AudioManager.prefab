@@ -46,37 +46,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
-    volume: 0.225
-    pitch: 0
+    clip: {fileID: 8300000, guid: 36e67579679f5df42864dbc3bc1d6930, type: 3}
+    volume: 0.15
+    pitch: 1
     loop: 1
     spatialBlend: 0
     source: {fileID: 0}
-  - name: CarStart
-    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 1
-    spatialBlend: 0
-    source: {fileID: 0}
-  - name: CarGo
-    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 1
-    spatialBlend: 0
-    source: {fileID: 0}
-  - name: CarStop
-    clip: {fileID: 8300000, guid: 43dfef678f99086429fa72550c23cc49, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 1
-    spatialBlend: 0
-    source: {fileID: 0}
-  - name: CarIdle
+  - name: Gas
     clip: {fileID: 8300000, guid: 766ace4d629f1a94cac228ba91181ce5, type: 3}
     volume: 1
-    pitch: 0.1
+    pitch: 1
     loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: BirdAmbience
+    clip: {fileID: 8300000, guid: c0844665136c2504b8b6e951fc8b6659, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: ObjectiveCompleted
+    clip: {fileID: 8300000, guid: 033d7d880704ce543b6521ab5a7412b1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: WrongObjective
+    clip: {fileID: 8300000, guid: 9ac274f208d924c4588755a8be531e02, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: 0628b7bbfaf677d4faea73a698d18a41, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: ExitButton
+    clip: {fileID: 8300000, guid: 25d14355fa67ec548b4595fe5035894d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: CompletedLevelFX
+    clip: {fileID: 8300000, guid: 16fc3e0bfbb65fb45a5a409e035ad2e2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     spatialBlend: 0
     source: {fileID: 0}
