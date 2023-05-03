@@ -13,6 +13,14 @@ public class AudioManager : MonoBehaviour
 
     //        FindObjectOfType<AudioManager>().Play("Gas");
 
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("BirdAmbience");
+        FindObjectOfType<AudioManager>().Play("Theme");
+    }
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,10 +56,5 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
-    }
-
-    public void UnmuteAudio()
-    {
-
     }
 }

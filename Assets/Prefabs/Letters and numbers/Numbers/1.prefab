@@ -113,8 +113,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368285940698362842}
-  - component: {fileID: 1776916905553094399}
-  - component: {fileID: -1220150252210411408}
+  - component: {fileID: 3811486533827827235}
+  - component: {fileID: 3318900060847936556}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -138,7 +138,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1776916905553094399
+--- !u!65 &3811486533827827235
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,9 +149,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0275993, y: 3.4023328, z: 1.4276493}
-  m_Center: {x: 0.07752609, y: 1.730274, z: 0.05739057}
---- !u!54 &-1220150252210411408
+  m_Size: {x: 2.1713276, y: 3.5345752, z: 1.7298255}
+  m_Center: {x: -0.023623466, y: 1.7897388, z: 0.011173964}
+--- !u!54 &3318900060847936556
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

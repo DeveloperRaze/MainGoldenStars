@@ -164,7 +164,7 @@ public class Puzzlescript2 : MonoBehaviour
 
             characterText.text = "Well done! We can move on to the next level.";
 
-            if (SecondsPassed >= 5f)
+            if (SecondsPassed >= 4f)
             {
                 SceneLoader.NextScene();
             }

@@ -160,7 +160,7 @@ public class PuzzleScript : MonoBehaviour
 
             triggerTree.SetTrigger();
 
-            if (SecondsPassed >= 5f)
+            if (SecondsPassed >= 4f)
             {
                 SceneLoader.NextScene();
             }
