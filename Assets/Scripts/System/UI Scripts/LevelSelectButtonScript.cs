@@ -7,24 +7,28 @@ public class LevelSelectButtonScript : MonoBehaviour
     public GameObject LevelSelectButton;
     public Canvas LevelSelectCanvas;
     public SceneLoader SceneLoader;
+    public GameObject MenuCanvas;
 
 
     private void Start()
     {
-        LevelSelectCanvas.enabled = false;
+        MenuCanvas.SetActive(false);
     }
 
     public void ShowCanvas()
     {
         FindObjectOfType<AudioManager>().Play("ButtonPress");
-        LevelSelectCanvas.enabled = true;
+        MenuCanvas.SetActive(true);
         SceneLoader.PauseGame();
     }
 
     public void HideCanvas()
     {
+        MenuCanvas.SetActive(false);
+
         FindObjectOfType<AudioManager>().Play("ExitButton");
-        LevelSelectCanvas.enabled = false;
         SceneLoader.ResumeGame();
+
+
     }
 }
