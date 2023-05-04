@@ -178,7 +178,7 @@ public class PuzzleScript3 : MonoBehaviour
             //Show UI whether to continue to next level or return to level select scene. 
             if (SecondsPassed >= 4f)
             {
-                SceneLoader.ReturnToLevelSelect();
+                SceneLoader.NextScene();
             }
         }
     }
