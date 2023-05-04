@@ -25,11 +25,4 @@ public class HideProgressCanvas : MonoBehaviour
         NumberTreeUI.enabled = false;
         LetterTreeUI.enabled = true;
     }
-
-    public void HideUI()
-    {
-        NumberTreeUI.enabled = false;
-        LetterTreeUI.enabled = false;
-
-    }
 }
