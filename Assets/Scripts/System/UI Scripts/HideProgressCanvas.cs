@@ -6,7 +6,6 @@ public class HideProgressCanvas : MonoBehaviour
 {
     [SerializeField] Canvas NumberTreeUI;
     [SerializeField] Canvas LetterTreeUI;
-    [SerializeField] Canvas MaterialChange;
 
 
     // Start is called before the first frame update
@@ -14,7 +13,6 @@ public class HideProgressCanvas : MonoBehaviour
     {
         NumberTreeUI.enabled = true;
         LetterTreeUI.enabled = false;
-        MaterialChange.enabled = false;
     }
 
     public void ShowNumberUI()
@@ -27,17 +25,5 @@ public class HideProgressCanvas : MonoBehaviour
     {
         LetterTreeUI.enabled = true;
         NumberTreeUI.enabled = false;
-    }
-
-    public void ShowCarColour()
-    {
-        MaterialChange.enabled = true;
-    }
-    public void HideCarColour()
-    {
-        if (MaterialChange.enabled == true)
-        {
-            MaterialChange.enabled = false;
-        }
     }
 }
