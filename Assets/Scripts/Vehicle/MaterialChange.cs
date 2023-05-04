@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MaterialChange : MonoBehaviour
 {
-    Renderer m_Renderer;
+    public Renderer m_Renderer;
 
     public Texture m_MainTexture, m_Normal, m_Metal;
 
@@ -18,15 +18,18 @@ public class MaterialChange : MonoBehaviour
     public void ChangeToBlue()
     {
         m_Renderer.material.SetTexture("_MainTex", m_MainTexture);
+        GetComponent<HideProgressCanvas>().HideCarColour(); 
     }
 
     public void ChangeToGreen()
     {
         m_Renderer.material.SetTexture("_MainTex", m_Normal);
+        GetComponent<HideProgressCanvas>().HideCarColour();
     }
 
     public void ChangeToRed()
     {
         m_Renderer.material.SetTexture("_MainTex", m_Metal);
+        GetComponent<HideProgressCanvas>().HideCarColour();
     }
 }

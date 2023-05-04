@@ -281,7 +281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122510660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MaterialChange, Assembly-CSharp
+        m_MethodName: ChangeToRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &122510660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,70 +427,13 @@ RectTransform:
   - {fileID: 2143055794}
   - {fileID: 1747933514}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &304404327
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 116448, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_Name
-      value: Car_1_Silver
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1210.951
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 371.765
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2215.114
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855698
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.00000003774895
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 8.250296e-16
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485172, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eebeaf026736b6546909968c8b4080b2, type: 3}
 --- !u!1 &379597301
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +516,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &381335622
 GameObject:
@@ -931,7 +886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &754424000
 PrefabInstance:
@@ -1089,7 +1044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778400096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MaterialChange, Assembly-CSharp
+        m_MethodName: ChangeToBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778400096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,75 +1095,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778400093}
   m_CullTransparentMesh: 1
---- !u!1001 &870141684
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6637027679560967708, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_Name
-      value: Van
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1502.7622
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2799.0347
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637027679561196370, guid: 611e6aa531571624cbaf71b31c2c8915,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 611e6aa531571624cbaf71b31c2c8915, type: 3}
 --- !u!1 &913906985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1301609506
 GameObject:
@@ -1635,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 8620438865877208744, guid: bf5d32e0077974b459b2700d39f5cfa2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8620438865877208744, guid: bf5d32e0077974b459b2700d39f5cfa2,
         type: 3}
@@ -1771,7 +1669,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1500885175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MaterialChange, Assembly-CSharp
+        m_MethodName: ChangeToGreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1500885175
 MonoBehaviour:
   m_ObjectHideFlags: 0

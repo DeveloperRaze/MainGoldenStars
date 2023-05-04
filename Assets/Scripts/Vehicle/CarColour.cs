@@ -18,7 +18,7 @@ public class CarColour : MonoBehaviour
         rend = GetComponent<Renderer>();
     }
 
-    public void SetMaterialMain()
+    public void SetMaterialBlue()
     {
         rend.material.SetTexture ("_MainTex", m_MainTexture);
     }
