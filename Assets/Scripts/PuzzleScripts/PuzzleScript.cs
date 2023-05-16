@@ -25,6 +25,7 @@ public class PuzzleScript : MonoBehaviour
     //Fade in/Out for texts.
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
+
     //Tree Object.
     public TriggerTree triggerTree;
     //Camera Objects.

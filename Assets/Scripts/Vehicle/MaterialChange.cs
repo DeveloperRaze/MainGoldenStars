@@ -13,6 +13,7 @@ public class MaterialChange : MonoBehaviour
         m_Renderer = GetComponent<Renderer>();
     }
 
+    //To allow the car colour to be changed, Blue is 0, Green is 1, and Red is 2.
     private void Update()
     {
         if (StaticNumberClass.carValue == 0)
@@ -54,18 +55,18 @@ public class MaterialChange : MonoBehaviour
         ToggleCarColourChangeUI.HideCarColours();
         StaticNumberClass.carValue = 2;
     }
-
-    public void SetBlue()
+    
+    private void SetBlue()
     {
         m_Renderer.material.SetTexture("_MainTex", m_MainTexture);
         StaticNumberClass.carValue = 0;
     }
-    public void SetGreen()
+    private void SetGreen()
     {
         m_Renderer.material.SetTexture("_MainTex", m_Normal);
         StaticNumberClass.carValue = 1;
     }
-    public void SetRed()
+    private void SetRed()
     {
         m_Renderer.material.SetTexture("_MainTex", m_Metal);
         StaticNumberClass.carValue = 2;

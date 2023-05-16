@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 205698386}
   - component: {fileID: 205698385}
   m_Layer: 0
-  m_Name: Tree (1)
+  m_Name: Tree2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ RectTransform:
   m_GameObject: {fileID: 205698383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -103}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 4.7424, y: 4.7424, z: 4.7424}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2143055794}
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: -75}
+  m_AnchoredPosition: {x: 512, y: -75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205698385
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 379597303}
   - component: {fileID: 379597302}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 574779216}
   - component: {fileID: 574779215}
   m_Layer: 0
-  m_Name: Game_Background
+  m_Name: GameBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,7 +561,7 @@ RectTransform:
   m_GameObject: {fileID: 574779213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0619, y: 1.0619, z: 1.0619}
+  m_LocalScale: {x: 1.3904518, y: 1.3904518, z: 1.3904518}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2143055794}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 599165543}
   - component: {fileID: 599165542}
   m_Layer: 5
-  m_Name: Cloud_1
+  m_Name: Cloud1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 6196231206045329210, guid: 772dc93e8d0a2774d95f72c313d88ff0,
         type: 3}
       propertyPath: m_Name
-      value: Level Loader
+      value: LevelLoader
       objectReference: {fileID: 0}
     - target: {fileID: 7149624046741844225, guid: 772dc93e8d0a2774d95f72c313d88ff0,
         type: 3}
@@ -938,7 +938,7 @@ RectTransform:
   m_GameObject: {fileID: 1068726225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -103}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 4.7424, y: 4.7424, z: 4.7424}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2143055794}
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 1301609508}
   - component: {fileID: 1301609510}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: StarEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1185,7 +1185,7 @@ GameObject:
   - component: {fileID: 1389706557}
   - component: {fileID: 1389706556}
   m_Layer: 0
-  m_Name: Character_Images
+  m_Name: CharacterImages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1432,7 +1432,7 @@ GameObject:
   - component: {fileID: 1723983798}
   - component: {fileID: 1723983797}
   m_Layer: 5
-  m_Name: Title_Golden_Stars
+  m_Name: TitleGoldenStars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1707,7 +1707,7 @@ GameObject:
   - component: {fileID: 1740638550}
   - component: {fileID: 1740638552}
   m_Layer: 0
-  m_Name: Start_Button
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 1931189895}
   - component: {fileID: 1931189894}
   m_Layer: 5
-  m_Name: Cloud_3
+  m_Name: Cloud3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2156,7 +2156,7 @@ GameObject:
   - component: {fileID: 2035491988}
   - component: {fileID: 2035491987}
   m_Layer: 5
-  m_Name: Cloud_2
+  m_Name: Cloud2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,7 +17,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] GameObject PlayButton;
     [SerializeField] GameObject PauseText;
 
-    //Reload Game
+    //Reload Gamew
     public void ReloadGame()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
