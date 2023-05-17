@@ -14,11 +14,8 @@ public class SpawnObject : MonoBehaviour
     //time in seconds for counter.
     float timePassed = 0f;
 
-
+    //Variable for array
     public float Items = 0f;
-
-
-    //Debug value for what object to spawn
 
     void Update()
     {
@@ -27,35 +24,19 @@ public class SpawnObject : MonoBehaviour
 
         //float in seconds
         timePassed += Time.deltaTime;
-
-        //Spawns 1 object every 5 seconds
-        //if (timePassed > 5f)
-        //{
-            //Select random item from index
-        //    int randomIndex = Random.Range(0, letterObjects.Length);
-
-            //Select random spawn position based on parameters
-        //    Vector3 randomSpawnPosition = new Vector3(Random.Range(xValue, zValue), yValue, Random.Range(xValue, zValue));
-
-            //Instantiate chosen object at chosen random spawn position
-        //    Instantiate(letterObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
-
-            //Set timePassed back to 0.
-        //    timePassed = 0f;
-        //}
     }
 
     public void InstantiateObjects()
     {
 
-        //To correctly call a variable from another script - eg. number 2 or number 3 has fallen, then set that variable to be instantiated.
-
+        //call a variable from another script - eg. number 2 or number 3 has been destroyed, then set that variable to be instantiated.
         //Select random item from index
         int randomIndex = Random.Range(0, letterObjects.Length);
 
-        //Select random spawn position based on parameters
+        //Select random spawn position based on declared variable parameters
         Vector3 randomSpawnPosition = new Vector3(Random.Range(xValue, zValue), yValue, Random.Range(xValue, zValue));
 
+        //Items 1 to 25 covers the eventuality of 1-20 and A-Z being instantiated from the array, with A being item 0 and Z being item 25.
         if (Items == 1)
         {
             //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
@@ -169,6 +150,31 @@ public class SpawnObject : MonoBehaviour
         {
             //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
             Instantiate(letterObjects[20], randomSpawnPosition, Quaternion.identity);
+        }
+        if (Items == 21)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[21], randomSpawnPosition, Quaternion.identity);
+        }
+        if (Items == 22)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[22], randomSpawnPosition, Quaternion.identity);
+        }
+        if (Items == 23)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[23], randomSpawnPosition, Quaternion.identity);
+        }
+        if (Items == 24)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[24], randomSpawnPosition, Quaternion.identity);
+        }
+        if (Items == 25)
+        {
+            //Instantiate chosen object at chosen random spawn position. //letterObjects can take a specific value (0-X) or randomIndex should random be needed.
+            Instantiate(letterObjects[25], randomSpawnPosition, Quaternion.identity);
         }
     }
 }

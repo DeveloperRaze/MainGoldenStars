@@ -15,7 +15,7 @@ public class FaderScript : MonoBehaviour
         ShowUI();
 
         //Hides the Character text after 3 seconds.
-        Invoke(nameof(HideUI), 3);
+        Invoke(nameof(HideUI), 2);
     }
 
     public void ShowUI()
@@ -51,6 +51,7 @@ public class FaderScript : MonoBehaviour
                 }
             }
         }
+
         //If fadeOut is true.
         if (fadeOut)
         {

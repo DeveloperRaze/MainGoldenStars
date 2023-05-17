@@ -5,19 +5,29 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    // I need to work out how to load Level select scene regardless of what scene the player is on. 
     //Animator that creates the transition effect
     public Animator transition;
+
     //Current scene index in build settings
     int currentSceneIndex;
-    //Effect transition time
+
+    //Effect transition time is 3 seconds. 
     public float transitionTime = 3f;
     //UI menu buttons.
     [SerializeField] GameObject PauseButton;
     [SerializeField] GameObject PlayButton;
     [SerializeField] GameObject PauseText;
 
-    //Reload Gamew
+    //Removes unassigned ref errors from first scene
+    public void Start()
+    {
+        if (PauseButton != null)
+        {
+            return;
+        }
+    }
+
+    //Reload Game
     public void ReloadGame()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -51,13 +61,14 @@ public class SceneLoader : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
         NextScene();
     }
+
     //Next Scene
     public void NextScene()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    //
+
     public void ReturnToLevelSelect()
     {
         SceneManager.LoadScene("2 Level selection");

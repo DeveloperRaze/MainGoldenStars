@@ -76,7 +76,6 @@ public class PuzzleScript3 : MonoBehaviour
         CharacterTexts();
         FadeIn();
 
-        Debug.Log("SecondsPassed" + SecondsPassed);
         //If timer on then start counting.
         if (TimerOn == true)
         {
@@ -121,10 +120,9 @@ public class PuzzleScript3 : MonoBehaviour
 
     public void CharacterTexts()
     {
-        //Text based on level player is on.
+        //Intro to level text and colour
         if (currentLevel == 7f)
         {
-
             //Set text to second objective
             characterText.text = "Can you find the number 7?";
             //Objective UI changes to match the objective.
@@ -165,10 +163,10 @@ public class PuzzleScript3 : MonoBehaviour
 
         if (currentLevel == 11f)
         {
-            mainCamera.enabled = false;
-            secondCamera.enabled = true;
             Star3.SetActive(true);
             AddStar9();
+            mainCamera.enabled = false;
+            secondCamera.enabled = true;
 
             //Objective UI changes to match the objective.
             triggerTree.SetTrigger();

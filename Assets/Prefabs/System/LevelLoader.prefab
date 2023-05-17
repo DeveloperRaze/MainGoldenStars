@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7601295706466191056}
   - component: {fileID: 92761467426489213}
   - component: {fileID: 3053449812386817015}
-  m_Layer: 0
-  m_Name: Crossfade
+  m_Layer: 5
+  m_Name: Crossfade Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7601295706466191056
 MonoBehaviour:
@@ -132,8 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 454221117797156469}
   - component: {fileID: 7427158507702822616}
-  m_Layer: 0
-  m_Name: Level Loader
+  m_Layer: 5
+  m_Name: LevelLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 7612286538188785930}
   - component: {fileID: 682982206811691467}
   - component: {fileID: 1995556320795134659}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

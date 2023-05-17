@@ -76,7 +76,6 @@ public class Puzzlescript2 : MonoBehaviour
         CharacterTexts();
         FadeIn();
 
-        Debug.Log("SecondsPassed" + SecondsPassed);
         //If timer on then start counting.
         if (TimerOn == true)
         {
@@ -121,7 +120,7 @@ public class Puzzlescript2 : MonoBehaviour
 
     public void CharacterTexts()
     {
-        //Text based on level player is on.
+        //Intro to level text and colour
         if (currentLevel == 4f)
         {
             //Set text to second objective
@@ -154,13 +153,13 @@ public class Puzzlescript2 : MonoBehaviour
 
         if (currentLevel == 7f)
         {
+            Star3.SetActive(true);
             AddStar6();
             mainCamera.enabled = false;
             secondCamera.enabled = true;
 
             //Objective UI changes to match the objective.
             triggerTree.SetTrigger();
-            Star3.SetActive(true);
 
             characterText.text = "Well done! We can move on to the next level.";
 

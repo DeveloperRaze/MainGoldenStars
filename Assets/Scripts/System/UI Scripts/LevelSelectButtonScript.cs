@@ -19,7 +19,8 @@ public class LevelSelectButtonScript : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("ButtonPress");
         MenuCanvas.SetActive(true);
-        SceneLoader.PauseGame();
+        SceneLoader.PauseGame(); // This calls an error because it pauses the game but asks PauseGame to set the pause text and play button active,
+                                 // when it is not present in this scene.
     }
 
     public void HideCanvas()
@@ -27,8 +28,7 @@ public class LevelSelectButtonScript : MonoBehaviour
         MenuCanvas.SetActive(false);
 
         FindObjectOfType<AudioManager>().Play("ExitButton");
-        SceneLoader.ResumeGame();
-
-
+        SceneLoader.ResumeGame();// This calls an error because it pauses the game but asks ResumeGame to set the Pause button active,
+                                 // when it is not present in this scene.
     }
 }

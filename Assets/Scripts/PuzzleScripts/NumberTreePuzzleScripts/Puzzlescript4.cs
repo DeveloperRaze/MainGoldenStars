@@ -121,7 +121,7 @@ public class Puzzlescript4 : MonoBehaviour
 
     public void CharacterTexts()
     {
-        //Text based on level player is on.
+        //Intro to level text and colour
         if (currentLevel == 11f)
         {
             //Set text to second objective
@@ -156,10 +156,10 @@ public class Puzzlescript4 : MonoBehaviour
 
         if (currentLevel == 14f)
         {
-            mainCamera.enabled = false;
-            secondCamera.enabled = true;
             Star3.SetActive(true);
             AddStar12();
+            mainCamera.enabled = false;
+            secondCamera.enabled = true;
 
             //Objective UI changes to match the objective.
             triggerTree.SetTrigger();

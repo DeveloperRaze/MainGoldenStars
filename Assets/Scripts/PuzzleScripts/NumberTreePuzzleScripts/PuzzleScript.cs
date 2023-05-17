@@ -81,7 +81,6 @@ public class PuzzleScript : MonoBehaviour
         CharacterTexts();
         FadeIn();
 
-        Debug.Log("SecondsPassed" + SecondsPassed);
         //If timer on then start counting.
         if (TimerOn == true)
         {
@@ -126,7 +125,7 @@ public class PuzzleScript : MonoBehaviour
 
     public void CharacterTexts()
     {
-        //Text based on level player is on.
+        //Intro to level text and colour
         if (currentLevel == 2f)
         {
             //Award the first star

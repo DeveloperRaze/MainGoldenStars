@@ -8968,7 +8968,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8b22b5fd22c8b7744ac3854e6b3cb9a0, type: 2}
+      objectReference: {fileID: 2100000, guid: bc02b8a9061716446ae0b68c23380960, type: 2}
     - target: {fileID: 6637027679558983436, guid: 611e6aa531571624cbaf71b31c2c8915,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -9070,23 +9070,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1257170232}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1257170235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257170234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745246da7e40924499400d46e2b1424e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Renderer: {fileID: 0}
-  ToggleCarColourChangeUI: {fileID: 0}
-  m_MainTexture: {fileID: 2800000, guid: 61644e2617586ff4c861076da38695da, type: 3}
-  m_Normal: {fileID: 2800000, guid: 8c3f1e5de4a9d7344b53347176e0b1ab, type: 3}
-  m_Metal: {fileID: 2800000, guid: ad702e44a8df18d41b4f7e925c9d5019, type: 3}
 --- !u!114 &1257170236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9154,7 +9137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Renderer: {fileID: 1257170238}
-  ToggleCarColourChangeUI: {fileID: 0}
+  ToggleCarColourChangeUI: {fileID: 1393940745}
   m_MainTexture: {fileID: 2800000, guid: 61644e2617586ff4c861076da38695da, type: 3}
   m_Normal: {fileID: 2800000, guid: ad702e44a8df18d41b4f7e925c9d5019, type: 3}
   m_Metal: {fileID: 2800000, guid: 8c3f1e5de4a9d7344b53347176e0b1ab, type: 3}
@@ -9832,6 +9815,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 34033917}
     m_Modifications:
+    - target: {fileID: 1678720141292798122, guid: 4e6c93086b95ea54b8309161d05c13a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1678720143073417137, guid: 4e6c93086b95ea54b8309161d05c13a6,
         type: 3}
       propertyPath: m_Name
@@ -9980,6 +9968,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1393940743}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393940745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1678720142481930326, guid: 4e6c93086b95ea54b8309161d05c13a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393940743}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22d67556eda39c47a543ca8ba26b57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1409915880
 PrefabInstance:
   m_ObjectHideFlags: 0
