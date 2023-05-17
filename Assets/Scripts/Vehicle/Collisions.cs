@@ -13,6 +13,7 @@ public class Collisions : MonoBehaviour
 
     public void Start()
     {
+        //I need to call these two components to allow collisions to work in number tree scene 2. 
         GetComponent<Puzzlescript2>();
         currentLevel = GetComponent<Puzzlescript2>().currentLevel;
         InstantiateBool = false;
@@ -83,7 +84,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 1-2 
+        // Level 1-2 (2)
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 2)
         {
             InstantiateBool = true;
@@ -123,7 +124,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 1-3
+        // Level 1-3 (3)
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
@@ -163,7 +164,7 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        // Level 1-4 (numbers 4-6)
+        // Level 1-4 (numbers 4-6) (4)
 
         if (collision.gameObject.name == "4(Clone)" && currentLevel == 4)
         {
@@ -204,7 +205,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 1-5
+        // Level 1-5 (5)
         if (collision.gameObject.name == "4(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
@@ -244,7 +245,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 1-6
+        // Level 1-6 (6)
         if (collision.gameObject.name == "4(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
@@ -284,7 +285,7 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        // Level 1-7 (number 7-10)
+        // Level 1-7 (number 7-10) (7)
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 7)
         {
             //If correct object was destroyed then move to next object.
@@ -336,7 +337,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-8
+        //Level 1-8 (8)
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
@@ -389,7 +390,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-9
+        //Level 1-9 (9)
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
@@ -443,7 +444,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-10
+        //Level 1-10 (10)
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
@@ -502,7 +503,7 @@ public class Collisions : MonoBehaviour
 
 
 
-        //Level 1-11 - (Numbers 11-13)
+        //Level 1-11 - (Numbers 11-13) (11)
         if (collision.gameObject.name == "11(Clone)" && currentLevel == 11)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
@@ -545,7 +546,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-12 - 
+        //Level 1-12 (12)
         if (collision.gameObject.name == "11(Clone)" && currentLevel == 12)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
@@ -588,7 +589,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-13 - 
+        //Level 1-13 (13)
         if (collision.gameObject.name == "11(Clone)" && currentLevel == 13)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
@@ -632,8 +633,7 @@ public class Collisions : MonoBehaviour
         }
 
 
-
-        //Level 1-14 - (Numbers 14-16)
+        //Level 1-14 (Numbers 14-16) (14)
         if (collision.gameObject.name == "14(Clone)" && currentLevel == 14)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
@@ -676,7 +676,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-15 - 
+        //Level 1-15 (15)
         if (collision.gameObject.name == "14(Clone)" && currentLevel == 15)
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
@@ -719,7 +719,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-16 - 
+        //Level 1-16 (16)
         if (collision.gameObject.name == "14(Clone)" && currentLevel == 16)
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
@@ -763,7 +763,7 @@ public class Collisions : MonoBehaviour
         }
 
 
-        //Level 1-17
+        //Level 1-17 (17)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 17)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
@@ -821,7 +821,7 @@ public class Collisions : MonoBehaviour
 
         }
 
-        //Level 1-18
+        //Level 1-18 (18)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
@@ -879,7 +879,7 @@ public class Collisions : MonoBehaviour
 
         }
 
-        //Level 1-19
+        //Level 1-19 (19)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
@@ -936,7 +936,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        //Level 1-20
+        //Level 1-20 (20)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
@@ -991,6 +991,449 @@ public class Collisions : MonoBehaviour
             currentLevel++;
             Destroy(collision.gameObject);
             GetComponent<Puzzlescript6>().NextLevel();
+        }
+
+
+        // Level 2-1 (A-E) A
+        if (collision.gameObject.name == "A(Clone)" && currentLevel == 1)
+        {
+            //If correct object was destroyed then move to next object.
+            //Increase level by 1
+            //Destroy correct gameObject.
+
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            GetComponent<LetterTreePuzzleScript1>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "B(Clone)" && currentLevel == 1)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 2 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 1;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "C(Clone)" && currentLevel == 1)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 2;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "D(Clone)" && currentLevel == 1)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 3;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "E(Clone)" && currentLevel == 1)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 4;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+
+        // Level 2-2 (A-E) B
+        if (collision.gameObject.name == "A(Clone)" && currentLevel == 2)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 2 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 0;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "B(Clone)" && currentLevel == 2)
+        {
+            //If correct object was destroyed then move to next object.
+            //Increase level by 1
+            //Destroy correct gameObject.
+
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            GetComponent<LetterTreePuzzleScript1>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "C(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 2;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "D(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 3;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "E(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 4;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        // Level 2-3 (A-E) C
+
+        if (collision.gameObject.name == "A(Clone)" && currentLevel == 2)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 2 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 0;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "B(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 1;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "C(Clone)" && currentLevel == 2)
+        {
+            //If correct object was destroyed then move to next object.
+            //Increase level by 1
+            //Destroy correct gameObject.
+
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            GetComponent<LetterTreePuzzleScript1>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "D(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 3;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "E(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 4;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        // Level 2-4 (A-E) D
+
+        if (collision.gameObject.name == "A(Clone)" && currentLevel == 2)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 2 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 0;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "B(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 1;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "C(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 2;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "D(Clone)" && currentLevel == 2)
+        {
+            //If correct object was destroyed then move to next object.
+            //Increase level by 1
+            //Destroy correct gameObject.
+
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            GetComponent<LetterTreePuzzleScript1>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "E(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 4;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+
+        // Level 2-4 (A-E) D
+
+        if (collision.gameObject.name == "A(Clone)" && currentLevel == 2)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 2 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 0;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "B(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 1;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "C(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 2;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "D(Clone)" && currentLevel == 2)
+        {
+            //If Instantiate is true (to limit event to one occurance)
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            //Set text component
+            GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
+            //Destroy object
+
+            Destroy(collision.gameObject);
+
+            //If bool is true, spawn number 3 and set bool false
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 3;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "E(Clone)" && currentLevel == 2)
+        {
+            //If correct object was destroyed then move to next object.
+            //Increase level by 1
+            //Destroy correct gameObject.
+
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            GetComponent<LetterTreePuzzleScript1>().NextLevel();
+            currentLevel++;
+            Destroy(collision.gameObject);
         }
     }
 }
