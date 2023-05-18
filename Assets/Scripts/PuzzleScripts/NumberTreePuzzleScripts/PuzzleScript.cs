@@ -5,11 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class PuzzleScript : MonoBehaviour
-{
-    //Bug:  
-    //We need to input a command to level select scene to award stars accordingly.
-    //This script has been attached to the car because of the collision script needing to access it?
-
+{ 
     [SerializeField] private CanvasGroup characterUIGroup;
     [SerializeField] private CanvasGroup ObjectiveUIGroup;
 
@@ -215,25 +211,25 @@ public class PuzzleScript : MonoBehaviour
 
     public void AddStar1()
     {
-        if (GameSessionHandler.starCount == 0)
+        if (GameSession.starCount == 0)
         {
-            GameSessionHandler.starCount = 1;
+            GameSession.starCount = 1;
         }
     }
 
     public void AddStar2()
     {
-        if (GameSessionHandler.starCount == 1)
+        if (GameSession.starCount == 1)
         {
-            GameSessionHandler.starCount = 2;
+            GameSession.starCount = 2;
         }
     }
 
     public void AddStar3()
     {
-        if (GameSessionHandler.starCount == 2)
+        if (GameSession.starCount == 2)
         {
-            GameSessionHandler.starCount = 3;
+            GameSession.starCount = 3;
         }
     }
 }

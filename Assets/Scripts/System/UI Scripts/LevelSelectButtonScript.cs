@@ -12,6 +12,7 @@ public class LevelSelectButtonScript : MonoBehaviour
 
     private void Start()
     {
+        //Hide level progress canvas at start
         MenuCanvas.SetActive(false);
     }
 

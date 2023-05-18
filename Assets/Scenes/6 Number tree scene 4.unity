@@ -9141,6 +9141,18 @@ MonoBehaviour:
   m_MainTexture: {fileID: 2800000, guid: 61644e2617586ff4c861076da38695da, type: 3}
   m_Normal: {fileID: 2800000, guid: ad702e44a8df18d41b4f7e925c9d5019, type: 3}
   m_Metal: {fileID: 2800000, guid: 8c3f1e5de4a9d7344b53347176e0b1ab, type: 3}
+--- !u!114 &1257170241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257170234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0049e2636970ddd45aa8f0e89b707e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1286468805
 PrefabInstance:
   m_ObjectHideFlags: 0

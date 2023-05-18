@@ -228,25 +228,25 @@ public class Puzzlescript6 : MonoBehaviour
 
     public void AddStar16()
     {
-        if (GameSessionHandler.starCount == 15)
+        if (GameSession.starCount == 15)
         {
-            GameSessionHandler.starCount = 16;
+            GameSession.starCount = 16;
         }
     }
 
     public void AddStar17()
     {
-        if (GameSessionHandler.starCount == 16)
+        if (GameSession.starCount == 16)
         {
-            GameSessionHandler.starCount = 17;
+            GameSession.starCount = 17;
         }
     }
 
     public void AddStar18()
     {
-        if (GameSessionHandler.starCount == 17)
+        if (GameSession.starCount == 17)
         {
-            GameSessionHandler.starCount = 18;
+            GameSession.starCount = 18;
         }
     }
 }

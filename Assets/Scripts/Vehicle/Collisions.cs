@@ -19,15 +19,6 @@ public class Collisions : MonoBehaviour
         InstantiateBool = false;
     }
 
-    public void Update()
-    {
-        //Debug code for fun to instantiate objects.
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            Spawner.InstantiateObjects();
-        }
-    }
-
     //Detect collisions between the Number Tree GameObjects with Colliders attached
     public void OnCollisionEnter(Collision collision)
     {

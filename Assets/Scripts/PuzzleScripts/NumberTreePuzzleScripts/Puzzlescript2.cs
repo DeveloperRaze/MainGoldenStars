@@ -216,25 +216,25 @@ public class Puzzlescript2 : MonoBehaviour
 
     public void AddStar4()
     {
-        if (GameSessionHandler.starCount == 3)
+        if (GameSession.starCount == 3)
         {
-            GameSessionHandler.starCount = 4;
+            GameSession.starCount = 4;
         }
     }
 
     public void AddStar5()
     {
-        if (GameSessionHandler.starCount == 4)
+        if (GameSession.starCount == 4)
         {
-            GameSessionHandler.starCount = 5;
+            GameSession.starCount = 5;
         }
     }
 
     public void AddStar6()
     {
-        if (GameSessionHandler.starCount == 5)
+        if (GameSession.starCount == 5)
         {
-            GameSessionHandler.starCount = 6;
+            GameSession.starCount = 6;
         }
     }
 }

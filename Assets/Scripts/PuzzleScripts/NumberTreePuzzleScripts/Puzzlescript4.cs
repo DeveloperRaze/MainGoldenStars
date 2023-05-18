@@ -24,6 +24,7 @@ public class Puzzlescript4 : MonoBehaviour
     //Fade in/Out for texts.
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
+
     //Tree Object.
     public TriggerTree triggerTree;
     //Camera Objects.
@@ -89,7 +90,7 @@ public class Puzzlescript4 : MonoBehaviour
             SecondsPassed++;
         }
 
-        //This is how long the text displays before disappearing (10 seconds).
+        //This is how long the text displays before disappearing.
         if (SecondsPassed >= 5)
         {
             HideUI();
@@ -221,25 +222,25 @@ public class Puzzlescript4 : MonoBehaviour
 
     public void AddStar10()
     {
-        if (GameSessionHandler.starCount == 9)
+        if (GameSession.starCount == 9)
         {
-            GameSessionHandler.starCount = 10;
+            GameSession.starCount = 10;
         }
     }
 
     public void AddStar11()
     {
-        if (GameSessionHandler.starCount == 10)
+        if (GameSession.starCount == 10)
         {
-            GameSessionHandler.starCount = 11;
+            GameSession.starCount = 11;
         }
     }
 
     public void AddStar12()
     {
-        if (GameSessionHandler.starCount == 11)
+        if (GameSession.starCount == 11)
         {
-            GameSessionHandler.starCount = 12;
+            GameSession.starCount = 12;
         }
     }
 }
