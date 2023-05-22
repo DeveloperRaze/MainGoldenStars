@@ -5,9 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class LetterTreePuzzleScript1 : MonoBehaviour
-
 {
-
     [SerializeField] private CanvasGroup characterUIGroup;
     [SerializeField] private CanvasGroup ObjectiveUIGroup;
 
@@ -130,30 +128,46 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
         {
             //Award the first star
             Star1.SetActive(true);
-            AddStar1();
+            AddStar19();
 
             //Set text to second objective
-            characterText.text = "Can you find the number 2?";
+            characterText.text = "Can you find the letter B?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "2";
+            ojectiveText.text = "B";
             ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 3f)
         {
-            Star2.SetActive(true);
-            AddStar2();
-            characterText.text = "Can you find the number 3?";
-
+            characterText.text = "Can you find the letter C?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "3";
+            ojectiveText.text = "C";
             ojectiveText.color = Color.blue;
         }
 
         if (currentLevel == 4f)
         {
+            Star2.SetActive(true);
+            AddStar20();
+            characterText.text = "Can you find the letter D?";
+
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "D";
+            ojectiveText.color = Color.blue;
+        }
+
+        if (currentLevel == 5f)
+        {
+            characterText.text = "Can you find the letter E?";
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "E";
+            ojectiveText.color = Color.blue;
+        }
+
+        if (currentLevel == 6f)
+        {
             Star3.SetActive(true);
-            AddStar3();
+            AddStar21();
 
             mainCamera.enabled = false;
             secondCamera.enabled = true;
@@ -213,27 +227,27 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
         characterText.text = "Oops! Try again.";
     }
 
-    public void AddStar1()
+    public void AddStar19()
     {
-        if (GameSessionHandler.starCount == 0)
+        if (GameSessionHandler.starCount == 18)
         {
-            GameSessionHandler.starCount = 1;
+            GameSessionHandler.starCount = 19;
         }
     }
 
-    public void AddStar2()
+    public void AddStar20()
     {
-        if (GameSessionHandler.starCount == 1)
+        if (GameSessionHandler.starCount == 19)
         {
-            GameSessionHandler.starCount = 2;
+            GameSessionHandler.starCount = 20;
         }
     }
 
-    public void AddStar3()
+    public void AddStar21()
     {
-        if (GameSessionHandler.starCount == 2)
+        if (GameSessionHandler.starCount == 20)
         {
-            GameSessionHandler.starCount = 3;
+            GameSessionHandler.starCount = 21;
         }
     }
 }

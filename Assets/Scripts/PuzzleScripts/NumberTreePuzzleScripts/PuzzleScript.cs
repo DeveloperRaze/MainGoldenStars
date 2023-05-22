@@ -34,7 +34,7 @@ public class PuzzleScript : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 1.0f;
+    public int currentLevel = 1;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -53,7 +53,6 @@ public class PuzzleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
@@ -115,6 +114,7 @@ public class PuzzleScript : MonoBehaviour
     {
         //increase level, turn on timer and show UI.
         currentLevel++;
+        
         TimerOn = true;
         ShowUI();
     }
@@ -122,7 +122,7 @@ public class PuzzleScript : MonoBehaviour
     public void CharacterTexts()
     {
         //Intro to level text and colour
-        if (currentLevel == 2f)
+        if (currentLevel == 2)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -135,7 +135,7 @@ public class PuzzleScript : MonoBehaviour
             ojectiveText.color = Color.yellow;
         }
 
-        if (currentLevel == 3f)
+        if (currentLevel == 3)
         {
             Star2.SetActive(true);
             AddStar2();
@@ -146,7 +146,7 @@ public class PuzzleScript : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 4f)
+        if (currentLevel == 4)
         {
             Star3.SetActive(true);
             AddStar3();

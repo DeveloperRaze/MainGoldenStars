@@ -29,9 +29,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/8 Number tree scene 6.unity
     guid: 003ff6529d9922245bdb13bda41d5bbd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/9 LetterTree Scene 1.unity
     guid: 2baa574a60847b044b6adb154b49388e
+  - enabled: 1
+    path: Assets/Scenes/10 LetterTree Scene 2.unity
+    guid: 61a8ca0e41fa59045a2ff0c4f949e713
+  - enabled: 1
+    path: Assets/Scenes/11 LetterTree Scene 3.unity
+    guid: 2713cab63f2c40f4d94c69ceaec816a0
+  - enabled: 1
+    path: Assets/Scenes/12 LetterTree Scene 4.unity
+    guid: f3c07712797b8a446b4a9c308c8851b0
+  - enabled: 1
+    path: Assets/Scenes/13 LetterTree Scene 5.unity
+    guid: 3c8eaa973409b3a48b5ecb07b73ce17e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1cfcb65c9ee790e41a4d260b21df6708,
       type: 2}

@@ -35,7 +35,7 @@ public class Puzzlescript6 : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 7.0f;
+    public int currentLevel = 16;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -120,7 +120,7 @@ public class Puzzlescript6 : MonoBehaviour
     public void CharacterTexts()
     {
         //Text based on level player is on.
-        if (currentLevel == 17f)
+        if (currentLevel == 17)
         {
             //Set text to second objective
             characterText.text = "Can you find the number 17?";
@@ -129,7 +129,7 @@ public class Puzzlescript6 : MonoBehaviour
             ojectiveText.color = Color.magenta;
         }
 
-        if (currentLevel == 18f)
+        if (currentLevel == 18)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -141,7 +141,7 @@ public class Puzzlescript6 : MonoBehaviour
             ojectiveText.color = Color.black;
         }
 
-        if (currentLevel == 19f)
+        if (currentLevel == 19)
         {
             Star2.SetActive(true);
             AddStar17();
@@ -152,7 +152,7 @@ public class Puzzlescript6 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 20f)
+        if (currentLevel == 20)
         {
             characterText.text = "Can you find the number 20?";
 
@@ -161,7 +161,7 @@ public class Puzzlescript6 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 21f)
+        if (currentLevel == 21)
         {
             mainCamera.enabled = false;
             secondCamera.enabled = true;
@@ -173,7 +173,7 @@ public class Puzzlescript6 : MonoBehaviour
 
             characterText.text = "Well done! We have finished all the levels!";
 
-            //Show UI whether to continue to next level or return to level select scene. 
+            // Needs to call coroutine for fade in
             if (SecondsPassed >= 4f)
             {
                 SceneLoader.ReturnToLevelSelect();

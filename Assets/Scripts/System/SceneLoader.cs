@@ -33,6 +33,7 @@ public class SceneLoader : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+
     //Pause Game
     public void PauseGame()
     {
@@ -40,6 +41,7 @@ public class SceneLoader : MonoBehaviour
         PauseText.SetActive(true);
         PlayButton.SetActive(true);
     }
+
     //Resume Game
     public void ResumeGame()
     {
@@ -48,6 +50,7 @@ public class SceneLoader : MonoBehaviour
         PlayButton.SetActive(false);
         PauseButton.SetActive(true);
     }
+
     //Quit Game
     public void QuitGame()
     {
@@ -55,26 +58,30 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 
-    // Triggers for Orchard 1 & 2.
-    private void OnTriggerEnter(Collider other)
-    {
-        FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
-        NextScene();
-    }
-
-    //Next Scene
+    //Next Scene - To the number tree scene 1. 
     public void NextScene()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-
-    public void ReturnToLevelSelect()
+    public void NumberTreeScene()
     {
-        SceneManager.LoadScene("2 Level selection");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    // to delay the next scene, start Coroutine
+    //Takes player to Letter tree scene 1 once number tree has been completed. 
+    public void LetterTreeScene()
+    {
+        StartCoroutine(LetterTree(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    //Return to level select mid-game.
+    public void ReturnToLevelSelect()
+    {
+        StartCoroutine(ReturnHome(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    // to load the next scene
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation effect
@@ -85,6 +92,34 @@ public class SceneLoader : MonoBehaviour
 
         //Load scene
         SceneManager.LoadScene(levelIndex);
+    }
+
+    // to go to Letter tree scene 1
+    IEnumerator LetterTree(int levelIndex)
+    {
+        
+        //Play animation effect
+        transition.SetTrigger("Start");
+
+        //Wait for animation to stop
+        yield return new WaitForSeconds(transitionTime);
+
+        //Load scene
+        SceneManager.LoadScene(8);
+    }
+
+    // to return to home
+    IEnumerator ReturnHome(int levelIndex)
+    {
+
+        //Play animation effect
+        transition.SetTrigger("Start");
+
+        //Wait for animation to stop
+        yield return new WaitForSeconds(transitionTime);
+
+        //Load scene
+        SceneManager.LoadScene(1);
     }
 }
 

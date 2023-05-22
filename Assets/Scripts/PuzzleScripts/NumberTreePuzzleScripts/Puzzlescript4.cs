@@ -37,7 +37,7 @@ public class Puzzlescript4 : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 7.0f;
+    public int currentLevel = 10;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -54,6 +54,8 @@ public class Puzzlescript4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WhatLevelScript.whatLevel = currentLevel;
+
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
@@ -123,7 +125,7 @@ public class Puzzlescript4 : MonoBehaviour
     public void CharacterTexts()
     {
         //Intro to level text and colour
-        if (currentLevel == 11f)
+        if (currentLevel == 11)
         {
             //Set text to second objective
             characterText.text = "Can you find the number 11?";
@@ -132,7 +134,7 @@ public class Puzzlescript4 : MonoBehaviour
             ojectiveText.color = Color.magenta;
         }
 
-        if (currentLevel == 12f)
+        if (currentLevel == 12)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -144,7 +146,7 @@ public class Puzzlescript4 : MonoBehaviour
             ojectiveText.color = Color.black;
         }
 
-        if (currentLevel == 13f)
+        if (currentLevel == 13)
         {
             Star2.SetActive(true);
             AddStar11();
@@ -155,7 +157,7 @@ public class Puzzlescript4 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 14f)
+        if (currentLevel == 14)
         {
             Star3.SetActive(true);
             AddStar12();

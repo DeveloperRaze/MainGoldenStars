@@ -36,7 +36,7 @@ public class PuzzleScript3 : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 7.0f;
+    public int currentLevel = 7;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -121,7 +121,7 @@ public class PuzzleScript3 : MonoBehaviour
     public void CharacterTexts()
     {
         //Intro to level text and colour
-        if (currentLevel == 7f)
+        if (currentLevel == 7)
         {
             //Set text to second objective
             characterText.text = "Can you find the number 7?";
@@ -130,7 +130,7 @@ public class PuzzleScript3 : MonoBehaviour
             ojectiveText.color = Color.magenta;
         }
 
-        if (currentLevel == 8f)
+        if (currentLevel == 8)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -142,7 +142,7 @@ public class PuzzleScript3 : MonoBehaviour
             ojectiveText.color = Color.black;
         }
 
-        if (currentLevel == 9f)
+        if (currentLevel == 9)
         {
             Star2.SetActive(true);
             AddStar8();
@@ -153,7 +153,7 @@ public class PuzzleScript3 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 10f)
+        if (currentLevel == 10)
         {
             characterText.text = "Can you find the number 10?";
             //Objective UI changes to match the objective.
@@ -161,7 +161,7 @@ public class PuzzleScript3 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 11f)
+        if (currentLevel == 11)
         {
             Star3.SetActive(true);
             AddStar9();

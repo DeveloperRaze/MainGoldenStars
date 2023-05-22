@@ -19,11 +19,11 @@ public class GoldenStars_ReadMe : MonoBehaviour
     //Simple Stylized Tree Pack - https://assetstore.unity.com/packages/3d/vegetation/trees/simple-stylized-tree-pack-228132
     //Stylized Lowpoly Nature Pack - https://assetstore.unity.com/packages/templates/packs/stylized-lowpoly-nature-pack-206829
     //Textures - https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-textures-204742
-
+    // Dynamic Grass FX Textures - https://assetstore.unity.com/packages/vfx/shaders/directx-11/dynamic-grass-fx-144740 
 
     //Images
     //2d Tree https://www.pngmart.com/image/323471. Attribution to [url=https://www.pngmart.com/image/323471
-    //2D Tree PNG Photos[/url] <a href=https://www.pngmart.com/image/323471 target="_blank">2D Tree PNG Photos</a>
+    //2D Tree PNG Photos[/url] <a href=https://www.pngmart.com/image/323471 target="_blank">2D Tree PNG Photos</a> by LeastSquares LLC, leastsquares.io, support@leastsquares.io
 
 
 
