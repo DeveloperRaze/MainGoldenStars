@@ -176,7 +176,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
 
             if (SecondsPassed >= 4f)
             {
-                SceneLoader.NextScene();
+                SceneLoader.ReturnToLevelSelect();
             }
         }
     }

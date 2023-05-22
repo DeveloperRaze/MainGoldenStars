@@ -168,7 +168,7 @@ public class Puzzlescript6 : MonoBehaviour
             Star3.SetActive(true);
             AddStar18();
 
-            //Objective UI changes to match the objective.
+            //Objective UI changes to match the objective.d
             triggerTree.SetTrigger();
 
             characterText.text = "Well done! We have finished all the levels!";
@@ -176,7 +176,9 @@ public class Puzzlescript6 : MonoBehaviour
             // Needs to call coroutine for fade in
             if (SecondsPassed >= 4f)
             {
+                GetComponent<WhatLevelScript>().ResetLevel();
                 SceneLoader.ReturnToLevelSelect();
+
             }
         }
     }

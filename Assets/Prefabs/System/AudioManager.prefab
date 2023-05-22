@@ -101,3 +101,52 @@ MonoBehaviour:
     loop: 0
     spatialBlend: 0
     source: {fileID: 0}
+  - name: Find_1
+    clip: {fileID: 8300000, guid: cfffa6af2ba8b6746a16e9d7719e877a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Find_2
+    clip: {fileID: 8300000, guid: a38c08b16ad618941bf6ba9cfda046f2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Find_3
+    clip: {fileID: 8300000, guid: 887e68a627a148545b5670de4c7c3ba7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Oops
+    clip: {fileID: 8300000, guid: 73f8463f4448c9c42a04e8ad48ef4bb7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Well_done
+    clip: {fileID: 8300000, guid: 99401b1273fb0094a9ba6b57a08e5cd8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Find2main
+    clip: {fileID: 8300000, guid: a38c08b16ad618941bf6ba9cfda046f2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+  - name: Find3main
+    clip: {fileID: 8300000, guid: 887e68a627a148545b5670de4c7c3ba7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    spatialBlend: 0
+    source: {fileID: 0}

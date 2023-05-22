@@ -64,6 +64,7 @@ public class PuzzleScript : MonoBehaviour
 
         //Set text to story.
         characterText.text = "Can you find the number 1?";
+        FindObjectOfType<AudioManager>().Play("Find_1");
 
         //Make Character text visible at start.
         ShowUI();
@@ -132,7 +133,7 @@ public class PuzzleScript : MonoBehaviour
             //Award the first star
             Star1.SetActive(true);
             AddStar1();
-         
+
             //Set text to second objective
             characterText.text = "Can you find the number 2?";
             //Objective UI changes to match the objective.
