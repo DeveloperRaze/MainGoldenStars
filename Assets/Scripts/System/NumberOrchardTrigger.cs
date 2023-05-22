@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class NumberOrchardTrigger : MonoBehaviour
 {
+    public SceneLoader SceneLoader;
+
    private void OnTriggerEnter(Collider other)
    {
-       GetComponent<SceneLoader>().NumberTreeScene();
+       SceneLoader.NumberTreeScene();
    }
 }

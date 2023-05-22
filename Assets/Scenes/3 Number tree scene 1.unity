@@ -828,19 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5f9e48727186418edab1c4c5d7b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collisions: {fileID: 77945683}
---- !u!114 &77945683 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 344294925, guid: 611e6aa531571624cbaf71b31c2c8915,
-    type: 3}
-  m_PrefabInstance: {fileID: 77945667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77945672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0fdca5528c99c43bf73930fcba9442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &86108354
 PrefabInstance:
   m_ObjectHideFlags: 0

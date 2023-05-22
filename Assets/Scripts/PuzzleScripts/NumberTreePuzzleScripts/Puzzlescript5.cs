@@ -51,8 +51,6 @@ public class Puzzlescript5 : MonoBehaviour
 
     void Start()
     {
-        WhatLevelScript.whatLevel = currentLevel;
-
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;

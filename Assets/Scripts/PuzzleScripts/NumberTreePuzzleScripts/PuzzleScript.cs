@@ -22,6 +22,9 @@ public class PuzzleScript : MonoBehaviour
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
 
+    //Add a reference to collision current level value so this can be reset to 1 when the level starts. 
+    private Collisions collisions;
+
     //Tree Object.
     public TriggerTree triggerTree;
     //Camera Objects.
@@ -53,6 +56,8 @@ public class PuzzleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<WhatLevelScript>().ResetLevel();
+        
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;

@@ -55,6 +55,8 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<WhatLevelScript>().ResetLevel();
+
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
@@ -78,7 +80,6 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
         CharacterTexts();
         FadeIn();
 
-        Debug.Log("SecondsPassed" + SecondsPassed);
         //If timer on then start counting.
         if (TimerOn == true)
         {

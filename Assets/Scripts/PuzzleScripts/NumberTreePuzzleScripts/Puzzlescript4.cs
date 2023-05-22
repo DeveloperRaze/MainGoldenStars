@@ -54,8 +54,6 @@ public class Puzzlescript4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WhatLevelScript.whatLevel = currentLevel;
-
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;

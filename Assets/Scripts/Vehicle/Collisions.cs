@@ -10,7 +10,6 @@ public class Collisions : MonoBehaviour
 
     public void Start()
     {
-        InstantiateBool = false;
         currentLevel = WhatLevelScript.whatLevel;
     }
 

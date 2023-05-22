@@ -10,6 +10,13 @@ public class WhatLevelScript : MonoBehaviour
     public void Update()
     {
         Debug.Log("WhatLevel" + whatLevel);
+
+        //Sets the value of whatLevel based on the value of collisions.
         whatLevel = GetComponent<Collisions>().currentLevel;
+    }
+
+    public void ResetLevel()
+    {
+        whatLevel = 1;
     }
 }

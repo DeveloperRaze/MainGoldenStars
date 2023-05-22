@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LetterOrchardTrigger : MonoBehaviour
 {
-    // Triggers for Orchard 1 & 2.
-    public void OnTriggerEnter(Collider other)
+    public SceneLoader SceneLoader;
+
+    private void OnTriggerEnter(Collider other)
     {
-        GetComponent<SceneLoader>().LetterTreeScene();
+        SceneLoader.LetterTreeScene();
     }
 }
