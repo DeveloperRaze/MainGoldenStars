@@ -47,6 +47,28 @@ public class GameSessionHandler : MonoBehaviour
     [SerializeField] GameObject star17;
     [SerializeField] GameObject star18;
 
+    // Levels 1-1 Alphabet
+    [SerializeField] GameObject star19;
+    [SerializeField] GameObject star20;
+    [SerializeField] GameObject star21;
+
+    [SerializeField] GameObject star22;
+    [SerializeField] GameObject star23;
+    [SerializeField] GameObject star24;
+
+    [SerializeField] GameObject star25;
+    [SerializeField] GameObject star26;
+    [SerializeField] GameObject star27;
+
+    [SerializeField] GameObject star28;
+    [SerializeField] GameObject star29;
+    [SerializeField] GameObject star30;
+
+    [SerializeField] GameObject star31;
+    [SerializeField] GameObject star32;
+    [SerializeField] GameObject star33;
+
+
 
     public void Update()
     {
@@ -59,13 +81,10 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 2)
         {
-            star1.SetActive(true);
             star2.SetActive(true);
         }
         if (starCount == 3)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
             star3.SetActive(true);
         }
         if (starCount == 4)
@@ -271,6 +290,432 @@ public class GameSessionHandler : MonoBehaviour
             star16.SetActive(true);
             star17.SetActive(true);
             star18.SetActive(true);
+        }
+
+        if (starCount == 19)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+        }
+        if (starCount == 20)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+        }
+        if (starCount == 21)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+        }
+
+        if (starCount == 22)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+        }
+        if (starCount == 23)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+        }
+        if (starCount == 24)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+        }
+
+        if (starCount == 25)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+        }
+        if (starCount == 26)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+        }
+        if (starCount == 27)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+        }
+
+        if (starCount == 28)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+        }
+        if (starCount == 29)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+            star29.SetActive(true);
+
+        }
+        if (starCount == 30)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+            star29.SetActive(true);
+            star30.SetActive(true);
+        }
+
+        if (starCount == 31)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+            star29.SetActive(true);
+            star30.SetActive(true);
+            star31.SetActive(true);
+        }
+        if (starCount == 32)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+            star29.SetActive(true);
+            star30.SetActive(true);
+            star31.SetActive(true);
+            star32.SetActive(true);
+        }
+        if (starCount == 33)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+            star4.SetActive(true);
+            star5.SetActive(true);
+            star6.SetActive(true);
+            star7.SetActive(true);
+            star8.SetActive(true);
+            star9.SetActive(true);
+            star10.SetActive(true);
+            star11.SetActive(true);
+            star13.SetActive(true);
+            star14.SetActive(true);
+            star15.SetActive(true);
+            star16.SetActive(true);
+            star17.SetActive(true);
+            star18.SetActive(true);
+            star19.SetActive(true);
+            star20.SetActive(true);
+            star21.SetActive(true);
+            star22.SetActive(true);
+            star23.SetActive(true);
+            star24.SetActive(true);
+            star25.SetActive(true);
+            star26.SetActive(true);
+            star27.SetActive(true);
+            star28.SetActive(true);
+            star29.SetActive(true);
+            star30.SetActive(true);
+            star31.SetActive(true);
+            star32.SetActive(true);
+            star33.SetActive(true);
         }
     }
 }

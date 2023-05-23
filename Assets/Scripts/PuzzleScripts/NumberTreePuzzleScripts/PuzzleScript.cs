@@ -57,14 +57,13 @@ public class PuzzleScript : MonoBehaviour
     void Start()
     {
         GetComponent<WhatLevelScript>().ResetLevel();
-        
+        currentLevel = 1;
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
 
         //Set text to story.
         characterText.text = "Can you find the number 1?";
-        FindObjectOfType<AudioManager>().Play("Find_1");
 
         //Make Character text visible at start.
         ShowUI();
@@ -130,23 +129,21 @@ public class PuzzleScript : MonoBehaviour
         //Intro to level text and colour
         if (currentLevel == 2)
         {
+            characterText.text = "Can you find the number 2?";
             //Award the first star
             Star1.SetActive(true);
             AddStar1();
-
             //Set text to second objective
-            characterText.text = "Can you find the number 2?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "2";
             ojectiveText.color = Color.yellow;
         }
-
+   
         if (currentLevel == 3)
         {
             Star2.SetActive(true);
             AddStar2();
             characterText.text = "Can you find the number 3?";
-
             //Objective UI changes to match the objective.
             ojectiveText.text = "3";
             ojectiveText.color = Color.blue;
@@ -157,9 +154,9 @@ public class PuzzleScript : MonoBehaviour
             Star3.SetActive(true);
             AddStar3();
 
+            characterText.text = "Well done! Let's go to the next level.";
             mainCamera.enabled = false;
             secondCamera.enabled = true;
-            characterText.text = "Well done! Let's go to the next level.";
 
             triggerTree.SetTrigger();
 

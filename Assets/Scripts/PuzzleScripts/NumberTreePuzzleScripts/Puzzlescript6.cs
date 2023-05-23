@@ -178,7 +178,6 @@ public class Puzzlescript6 : MonoBehaviour
             {
                 GetComponent<WhatLevelScript>().ResetLevel();
                 SceneLoader.ReturnToLevelSelect();
-
             }
         }
     }

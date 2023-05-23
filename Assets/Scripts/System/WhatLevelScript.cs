@@ -13,11 +13,6 @@ public class WhatLevelScript : MonoBehaviour
 
         //Sets the value of whatLevel based on the value of collisions.
         whatLevel = GetComponent<Collisions>().currentLevel;
-
-        if (whatLevel == 2)
-        {
-            FindObjectOfType<AudioManager>().Play("Find_2");
-        }
     }
 
     public void ResetLevel()

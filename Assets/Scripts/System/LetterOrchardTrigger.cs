@@ -8,6 +8,8 @@ public class LetterOrchardTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GetComponent<WhatLevelScript>().ResetLevel();
+
         SceneLoader.LetterTreeScene();
     }
 }

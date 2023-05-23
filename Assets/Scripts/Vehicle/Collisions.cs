@@ -11,19 +11,11 @@ public class Collisions : MonoBehaviour
     public void Start()
     {
         currentLevel = WhatLevelScript.whatLevel;
-
-        if (currentLevel == 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Find_1");
-        }
-
     }
 
     private void Update()
     {
         Debug.Log("collision current Level = " + currentLevel);
-
-
     }
 
     //Detect collisions between the Number Tree GameObjects with Colliders attached
@@ -38,10 +30,7 @@ public class Collisions : MonoBehaviour
         {
             //If correct object was destroyed then move to next object.
             //Increase level by 1
-            //Destroy correct gameObject.
-
-            FindObjectOfType<AudioManager>().Play("Find2main");
-                            
+            //Destroy correct gameObject. 
             GetComponent<PuzzleScript>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -84,8 +73,8 @@ public class Collisions : MonoBehaviour
         // Level 1-2 (2)
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 2)
         {
-            FindObjectOfType<AudioManager>().Play("Find2main");
             InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("Oops");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -99,7 +88,6 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 2)
         {
-            FindObjectOfType<AudioManager>().Play("Find3main");
             //If correct object was destroyed then move to next object.
             GetComponent<PuzzleScript>().NextLevel();
             currentLevel++;
@@ -108,8 +96,8 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "3(Clone)" && currentLevel == 2)
         {
-            InstantiateBool = true;
             FindObjectOfType<AudioManager>().Play("Oops");
+            InstantiateBool = true;
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -140,7 +128,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("Find_3");
+            FindObjectOfType<AudioManager>().Play("Oops");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -155,7 +143,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "3(Clone)" && currentLevel == 3)
         {
             //If correct object was destroyed then move to next object.
-            FindObjectOfType<AudioManager>().Play("Well_done");
+            
             GetComponent<PuzzleScript>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
