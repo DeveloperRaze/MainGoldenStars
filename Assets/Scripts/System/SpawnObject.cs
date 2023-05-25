@@ -9,6 +9,9 @@ public class SpawnObject : MonoBehaviour
     //X/Z value border for spawning objects 
     float xValue = -50;
     float zValue = 50;
+
+    float border = 50;
+    float center = 0;
     //Y (Height) value. Lower = Closer to the floor. 
     float yValue = 75;
     //time in seconds for counter.
@@ -25,10 +28,14 @@ public class SpawnObject : MonoBehaviour
         //float in seconds
         timePassed += Time.deltaTime;
     }
+    // Draw Gizmo a   // t transform 0, set to variable
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector3(100,75,100));
+    }
 
     public void InstantiateObjects()
     {
-
         //call a variable from another script - eg. number 2 or number 3 has been destroyed, then set that variable to be instantiated.
         //Select random item from index
         int randomIndex = Random.Range(0, letterObjects.Length);

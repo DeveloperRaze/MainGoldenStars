@@ -156,7 +156,6 @@ Transform:
   - {fileID: 623107069}
   - {fileID: 104461282}
   - {fileID: 390669796}
-  - {fileID: 1498446167}
   - {fileID: 1504984075}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -5135,12 +5134,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498446163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.74031, y: 0, z: 86.66399}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5961692}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1502701513 stripped
 Transform:
@@ -5193,7 +5192,7 @@ Transform:
   - {fileID: 99669402}
   - {fileID: 735591063}
   m_Father: {fileID: 5961692}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1510411388 stripped
 Transform:
@@ -6524,7 +6523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9390b1b7546acd14498aac473c1e0702, type: 3}
+  m_Texture: {fileID: 2800000, guid: bd6b74921c8114f8c83a6ebbe8047a52, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

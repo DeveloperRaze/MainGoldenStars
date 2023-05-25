@@ -22,9 +22,6 @@ public class PuzzleScript : MonoBehaviour
     [SerializeField] public bool fadeIn = false;
     [SerializeField] public bool fadeOut = false;
 
-    //Add a reference to collision current level value so this can be reset to 1 when the level starts. 
-    private Collisions collisions;
-
     //Tree Object.
     public TriggerTree triggerTree;
     //Camera Objects.

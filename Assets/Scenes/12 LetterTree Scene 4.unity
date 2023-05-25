@@ -444,7 +444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9390b1b7546acd14498aac473c1e0702, type: 3}
+  m_Texture: {fileID: 2800000, guid: bd6b74921c8114f8c83a6ebbe8047a52, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4474,7 +4474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F
+  m_text: P
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57a7662975357d84ca1355c16f0643c4, type: 2}
   m_sharedMaterial: {fileID: 7765487874042894707, guid: 57a7662975357d84ca1355c16f0643c4,
@@ -4618,7 +4618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Can you find the Letter A?
+  m_text: Can you find the Letter P?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57a7662975357d84ca1355c16f0643c4, type: 2}
   m_sharedMaterial: {fileID: 7765487874042894707, guid: 57a7662975357d84ca1355c16f0643c4,
@@ -4646,7 +4646,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.35
+  m_fontSize: 54.7
   m_fontSizeBase: 49.89
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -56,6 +56,7 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
     void Start()
     {
         GetComponent<WhatLevelScript>().ResetLevel();
+        GetComponent<GameSession>();
 
         currentLevel = 1;
         //Enable main camera.

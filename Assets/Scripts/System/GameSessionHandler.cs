@@ -73,7 +73,7 @@ public class GameSessionHandler : MonoBehaviour
     public void Update()
     {
         starCount = GameSession.starCount;
-        Debug.Log(starCount + "StarCount");
+        Debug.Log(starCount + "LetterStarCount");
 
         if (starCount == 1)
         {
