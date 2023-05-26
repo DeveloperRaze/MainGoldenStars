@@ -209,6 +209,9 @@ public class PuzzleScript : MonoBehaviour
         characterText.text = "Oops! Try again.";
     }
 
+
+    //Adds stars to the Game session game object attached to vehicle in all scenes.
+    //This variable is then carried across to GameSessionHandler in Level Select.
     public void AddStar1()
     {
         if (GameSession.starCount == 0)

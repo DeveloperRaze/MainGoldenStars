@@ -232,25 +232,26 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
 
     public void AddStar19()
     {
-        if (GameSessionHandler.starCount == 18)
+        //Adds stars to the Game session game object attached to vehicle in all scenes. This variable is carried across to GameSessionHandler in Level Select.
+        if (GameSession.starCount == 18)
         {
-            GameSessionHandler.starCount = 19;
+            GameSession.starCount = 19;
         }
     }
 
     public void AddStar20()
     {
-        if (GameSessionHandler.starCount == 19)
+        if (GameSession.starCount == 19)
         {
-            GameSessionHandler.starCount = 20;
+            GameSession.starCount = 20;
         }
     }
 
     public void AddStar21()
     {
-        if (GameSessionHandler.starCount == 20)
+        if (GameSession.starCount == 20)
         {
-            GameSessionHandler.starCount = 21;
+            GameSession.starCount = 21;
         }
     }
 }

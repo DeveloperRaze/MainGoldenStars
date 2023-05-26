@@ -7,13 +7,11 @@ using System;
 
 public class GameSessionHandler : MonoBehaviour
 {
-    public static GameSessionHandler Instance;
-    public static int starCount;
+    //Game sessuion handler works in scene selection, displaying the cosmetic stars in Update based on how many stars the player has won. 
 
-    public void Start()
-    {
-        starCount = GameSession.starCount;
-    }
+    //Reference to barrier that is removed after the letter tree is finished. (18 stars)
+    [SerializeField] GameObject LetterTreeFence;
+    [SerializeField] GameObject LetterTreeSign;
 
     //NumberTree Star count
 
@@ -35,7 +33,7 @@ public class GameSessionHandler : MonoBehaviour
     //Levels 1-4
     [SerializeField] GameObject star10;
     [SerializeField] GameObject star11;
-    [SerializeField] GameObject star12;
+    [SerializeField] GameObject Star12;
 
     //Levels 1-5
     [SerializeField] GameObject star13;
@@ -68,10 +66,29 @@ public class GameSessionHandler : MonoBehaviour
     [SerializeField] GameObject star32;
     [SerializeField] GameObject star33;
 
+    public static GameSessionHandler Instance;
+    public static int starCount;
 
+    public void Start()
+    {
+        starCount = GameSession.starCount;
+    }
 
     public void Update()
     {
+        //At start set Letter tree to disabled by hiding sign and having an obstacle block the entrance. 
+        if (starCount < 17)
+        {
+            LetterTreeSign.SetActive(false);
+        }
+
+        //If 18 stars earned in number tree, then unlock letter tree.
+        if (starCount >= 18)
+        {
+            LetterTreeSign.SetActive(true);
+            Destroy(LetterTreeFence);
+        }
+
         starCount = GameSession.starCount;
         Debug.Log(starCount + "LetterStarCount");
 
@@ -184,7 +201,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
-            star12.SetActive(true);
+            Star12.SetActive(true);
         }
         if (starCount == 13)
         {
@@ -271,7 +288,7 @@ public class GameSessionHandler : MonoBehaviour
             star16.SetActive(true);
             star17.SetActive(true);
         }
-        if (starCount == 18)
+        if (starCount >= 18)
         {
             star1.SetActive(true);
             star2.SetActive(true);
@@ -294,66 +311,17 @@ public class GameSessionHandler : MonoBehaviour
 
         if (starCount == 19)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
         }
         if (starCount == 20)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
+
             star19.SetActive(true);
             star20.SetActive(true);
         }
         if (starCount == 21)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
+
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -361,23 +329,6 @@ public class GameSessionHandler : MonoBehaviour
 
         if (starCount == 22)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -385,23 +336,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 23)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -410,23 +344,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 24)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -437,23 +354,6 @@ public class GameSessionHandler : MonoBehaviour
 
         if (starCount == 25)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -464,23 +364,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 26)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -492,23 +375,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 27)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -522,23 +388,6 @@ public class GameSessionHandler : MonoBehaviour
 
         if (starCount == 28)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -552,23 +401,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 29)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -584,23 +416,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 30)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -617,23 +432,6 @@ public class GameSessionHandler : MonoBehaviour
 
         if (starCount == 31)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -650,23 +448,6 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 32)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
@@ -682,25 +463,8 @@ public class GameSessionHandler : MonoBehaviour
             star31.SetActive(true);
             star32.SetActive(true);
         }
-        if (starCount == 33)
+        if (starCount >= 33)
         {
-            star1.SetActive(true);
-            star2.SetActive(true);
-            star3.SetActive(true);
-            star4.SetActive(true);
-            star5.SetActive(true);
-            star6.SetActive(true);
-            star7.SetActive(true);
-            star8.SetActive(true);
-            star9.SetActive(true);
-            star10.SetActive(true);
-            star11.SetActive(true);
-            star13.SetActive(true);
-            star14.SetActive(true);
-            star15.SetActive(true);
-            star16.SetActive(true);
-            star17.SetActive(true);
-            star18.SetActive(true);
             star19.SetActive(true);
             star20.SetActive(true);
             star21.SetActive(true);
