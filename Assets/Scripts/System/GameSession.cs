@@ -9,9 +9,4 @@ public class GameSession : MonoBehaviour
 
     public static int starCount = 33;
     //Still unsure why start 12 isn't being awarded.
-
-    private void Update()
-    {
-        Debug.Log("startCount" + starCount);
-    }
 }

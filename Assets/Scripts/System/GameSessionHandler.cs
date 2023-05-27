@@ -90,7 +90,6 @@ public class GameSessionHandler : MonoBehaviour
         }
 
         starCount = GameSession.starCount;
-        Debug.Log(starCount + "LetterStarCount");
 
         if (starCount == 1)
         {

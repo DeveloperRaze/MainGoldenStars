@@ -10,8 +10,6 @@ public class SpawnObject : MonoBehaviour
     float xValue = -50;
     float zValue = 50;
 
-    float border = 50;
-    float center = 0;
     //Y (Height) value. Lower = Closer to the floor. 
     float yValue = 75;
     //time in seconds for counter.
@@ -22,9 +20,6 @@ public class SpawnObject : MonoBehaviour
 
     void Update()
     {
-        //Debug value for what object to spawn
-        Debug.Log("WhatObject" + Items);
-
         //float in seconds
         timePassed += Time.deltaTime;
     }
