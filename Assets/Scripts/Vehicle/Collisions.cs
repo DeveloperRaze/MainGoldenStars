@@ -13,11 +13,6 @@ public class Collisions : MonoBehaviour
         currentLevel = WhatLevelScript.whatLevel;
     }
 
-    private void Update()
-    {
-        Debug.Log("collision current Level = " + currentLevel);
-    }
-
     //Detect collisions between the Number Tree GameObjects with Colliders attached
     public void OnCollisionEnter(Collision collision)
     {

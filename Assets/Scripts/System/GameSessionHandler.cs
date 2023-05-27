@@ -33,7 +33,7 @@ public class GameSessionHandler : MonoBehaviour
     //Levels 1-4
     [SerializeField] GameObject star10;
     [SerializeField] GameObject star11;
-    [SerializeField] GameObject Star12;
+    [SerializeField] GameObject star12;
 
     //Levels 1-5
     [SerializeField] GameObject star13;
@@ -200,7 +200,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
-            Star12.SetActive(true);
+            star12.SetActive(true);
         }
         if (starCount == 13)
         {
@@ -215,6 +215,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
         }
         if (starCount == 14)
@@ -230,6 +231,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
             star14.SetActive(true);
         }
@@ -246,6 +248,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
             star14.SetActive(true);
             star15.SetActive(true);
@@ -263,6 +266,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
             star14.SetActive(true);
             star15.SetActive(true);
@@ -281,6 +285,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
             star14.SetActive(true);
             star15.SetActive(true);
@@ -300,6 +305,7 @@ public class GameSessionHandler : MonoBehaviour
             star9.SetActive(true);
             star10.SetActive(true);
             star11.SetActive(true);
+            star12.SetActive(true);
             star13.SetActive(true);
             star14.SetActive(true);
             star15.SetActive(true);
