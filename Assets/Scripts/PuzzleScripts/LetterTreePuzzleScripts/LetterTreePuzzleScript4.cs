@@ -36,7 +36,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 1.0f;
+    public float currentLevel = 16;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -58,6 +58,9 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
+
+        currentLevel = 16;
+
 
         //Set text to story.
         characterText.text = "Can you find the letter P?";
@@ -123,7 +126,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
     public void CharacterTexts()
     {
         //Text based on level player is on.
-        if (currentLevel == 16)
+        if (currentLevel == 17)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -136,7 +139,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
             ojectiveText.color = Color.yellow;
         }
 
-        if (currentLevel == 17)
+        if (currentLevel == 18)
         {
             characterText.text = "Can you find the letter M?";
             //Objective UI changes to match the objective.
@@ -144,7 +147,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 18)
+        if (currentLevel == 19)
         {
             Star2.SetActive(true);
             AddStar20();
@@ -155,7 +158,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 19)
+        if (currentLevel == 20)
         {
             characterText.text = "Can you find the letter O?";
             //Objective UI changes to match the objective.
@@ -163,7 +166,7 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 20)
+        if (currentLevel == 21)
         {
             Star3.SetActive(true);
             AddStar21();

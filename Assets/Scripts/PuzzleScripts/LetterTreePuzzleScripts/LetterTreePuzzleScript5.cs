@@ -36,7 +36,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
     public Canvas UICanvas;
 
     //Current level player is on.
-    public float currentLevel = 1.0f;
+    public float currentLevel = 21f;
     //Time in seconds = 0.
     float SecondsPassed = 0f;
     //Delay of 1 second.
@@ -58,6 +58,8 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
+
+        currentLevel = 21;
 
         //Set text to story.
         characterText.text = "Can you find the letter P?";
@@ -123,7 +125,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
     public void CharacterTexts()
     {
         //Text based on level player is on.
-        if (currentLevel == 16)
+        if (currentLevel == 22)
         {
             //Award the first star
             Star1.SetActive(true);
@@ -136,7 +138,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             ojectiveText.color = Color.yellow;
         }
 
-        if (currentLevel == 17)
+        if (currentLevel == 23)
         {
             characterText.text = "Can you find the letter M?";
             //Objective UI changes to match the objective.
@@ -144,7 +146,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 18)
+        if (currentLevel == 24)
         {
             Star2.SetActive(true);
             AddStar20();
@@ -155,7 +157,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 19)
+        if (currentLevel == 25)
         {
             characterText.text = "Can you find the letter O?";
             //Objective UI changes to match the objective.
@@ -163,14 +165,14 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             ojectiveText.color = Color.blue;
         }
 
-        if (currentLevel == 20)
+        if (currentLevel == 26)
         {
             Star3.SetActive(true);
             AddStar21();
 
             mainCamera.enabled = false;
             secondCamera.enabled = true;
-            characterText.text = "Well done! Let's go to the next level.";
+            characterText.text = "Well done! We have finished all the levels!";
 
             triggerTree.SetTrigger();
 

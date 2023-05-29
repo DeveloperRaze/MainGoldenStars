@@ -789,7 +789,7 @@ PrefabInstance:
     - target: {fileID: 6637027679561196370, guid: a9c6e810b1e459d4b99cd2e9a38ec995,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6637027679561196370, guid: a9c6e810b1e459d4b99cd2e9a38ec995,
         type: 3}
@@ -933,6 +933,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5f9e48727186418edab1c4c5d7b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &464276879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464276870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1e03b96cabc13448a5f52ca105255d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterUIGroup: {fileID: 1459309861}
+  ObjectiveUIGroup: {fileID: 1940583516}
+  Star1: {fileID: 1139896680}
+  Star2: {fileID: 490635621}
+  Star3: {fileID: 1432093173}
+  characterText: {fileID: 887251266}
+  ojectiveText: {fileID: 1891529320}
+  fadeIn: 0
+  fadeOut: 0
+  triggerTree: {fileID: 1400834166}
+  mainCamera: {fileID: 827932309}
+  secondCamera: {fileID: 1498449213}
+  CharacterCanvas: {fileID: 1439588557}
+  UICanvas: {fileID: 1940583519}
+  currentLevel: 1
+  TimerOn: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  SceneLoader: {fileID: 1703371457}
+  transitionTime: 5
 --- !u!1001 &483988419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1546,7 +1577,7 @@ PrefabInstance:
     - target: {fileID: 8620438865877208744, guid: bf5d32e0077974b459b2700d39f5cfa2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8620438865877208744, guid: bf5d32e0077974b459b2700d39f5cfa2,
         type: 3}
@@ -4206,7 +4237,7 @@ PrefabInstance:
     - target: {fileID: 2890634002950391236, guid: 780e3164f36e41849bdf869c78e453ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2890634002950391236, guid: 780e3164f36e41849bdf869c78e453ca,
         type: 3}
@@ -5691,7 +5722,7 @@ PrefabInstance:
     - target: {fileID: 454221117797156469, guid: a16b5ac9c90baf04095dc2097e3a4972,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 454221117797156469, guid: a16b5ac9c90baf04095dc2097e3a4972,
         type: 3}

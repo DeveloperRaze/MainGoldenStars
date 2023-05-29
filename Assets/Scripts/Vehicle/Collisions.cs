@@ -1509,6 +1509,7 @@ public class Collisions : MonoBehaviour
         // Level 2-8 H
         if (collision.gameObject.name == "F(Clone)" && currentLevel == 8)
         {
+
             InstantiateBool = true;
             FindObjectOfType<AudioManager>().Play("WrongObjective");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
@@ -1516,13 +1517,28 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Spawner.Items = 7;
+                Spawner.Items = 5;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
             }
         }
 
-        if (collision.gameObject.name == "G(Clone)" && currentLevel == 7)
+        if (collision.gameObject.name == "G(Clone)" && currentLevel == 8)
+        {
+            InstantiateBool = true;
+            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
+            Destroy(collision.gameObject);
+
+            if (InstantiateBool == true)
+            {
+                Spawner.Items = 6;
+                Spawner.InstantiateObjects();
+                InstantiateBool = false;
+            }
+        }
+
+        if (collision.gameObject.name == "H(Clone)" && currentLevel == 8)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().NextLevel();
@@ -1530,22 +1546,7 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "H(Clone)" && currentLevel == 7)
-        {
-            InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
-            GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
-            Destroy(collision.gameObject);
-
-            if (InstantiateBool == true)
-            {
-                Spawner.Items = 7;
-                Spawner.InstantiateObjects();
-                InstantiateBool = false;
-            }
-        }
-
-        if (collision.gameObject.name == "I(Clone)" && currentLevel == 7)
+        if (collision.gameObject.name == "I(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
             FindObjectOfType<AudioManager>().Play("WrongObjective");
@@ -1561,7 +1562,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.name == "J(Clone)" && currentLevel == 7)
+        if (collision.gameObject.name == "J(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
             FindObjectOfType<AudioManager>().Play("WrongObjective");
@@ -2945,7 +2946,7 @@ public class Collisions : MonoBehaviour
                 InstantiateBool = false;
             }
         }
-
+           
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 26)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");

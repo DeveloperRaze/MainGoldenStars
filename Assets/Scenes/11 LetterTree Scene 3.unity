@@ -6227,6 +6227,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b5f9e48727186418edab1c4c5d7b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1786899382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786899377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd32ee1c4b57f74e8a4f950daa77d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterUIGroup: {fileID: 295244149}
+  ObjectiveUIGroup: {fileID: 591951105}
+  Star1: {fileID: 1711977947}
+  Star2: {fileID: 184924698}
+  Star3: {fileID: 1456920949}
+  characterText: {fileID: 922804588}
+  ojectiveText: {fileID: 284932348}
+  fadeIn: 0
+  fadeOut: 0
+  triggerTree: {fileID: 157638217}
+  mainCamera: {fileID: 1061117615}
+  secondCamera: {fileID: 1644348540}
+  CharacterCanvas: {fileID: 1003053256}
+  UICanvas: {fileID: 591951108}
+  currentLevel: 1
+  TimerOn: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  SceneLoader: {fileID: 1774224462}
+  transitionTime: 5
 --- !u!1 &1827294886
 GameObject:
   m_ObjectHideFlags: 0

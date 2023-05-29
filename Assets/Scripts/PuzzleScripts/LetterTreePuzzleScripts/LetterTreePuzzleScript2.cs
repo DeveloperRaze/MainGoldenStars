@@ -58,6 +58,9 @@ public class LetterTreePuzzleScript2 : MonoBehaviour
         //Enable main camera.
         mainCamera.enabled = true;
         secondCamera.enabled = false;
+        GetComponent<GameSession>();
+
+        currentLevel = 6;
 
         //Set text to story.
         characterText.text = "Can you find the letter F?";
