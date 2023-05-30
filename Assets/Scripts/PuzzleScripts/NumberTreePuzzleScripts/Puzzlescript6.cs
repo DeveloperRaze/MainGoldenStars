@@ -65,7 +65,7 @@ public class Puzzlescript6 : MonoBehaviour
         Invoke(nameof(HideUI), 5);
 
         //Set the color to match the active game object.
-        ojectiveText.color = Color.red;
+        ojectiveText.color = Color.cyan;
     }
 
     // Update is called once per frame
@@ -126,7 +126,7 @@ public class Puzzlescript6 : MonoBehaviour
             characterText.text = "Can you find the number 17?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "17";
-            ojectiveText.color = Color.magenta;
+            ojectiveText.color = Color.cyan;
         }
 
         if (currentLevel == 18)
@@ -138,7 +138,7 @@ public class Puzzlescript6 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "18";
-            ojectiveText.color = Color.black;
+            ojectiveText.color = Color.green;
         }
 
         if (currentLevel == 19)
@@ -149,7 +149,7 @@ public class Puzzlescript6 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "19";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.red;
         }
 
         if (currentLevel == 20)
@@ -158,7 +158,7 @@ public class Puzzlescript6 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "20";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 21)

@@ -67,7 +67,7 @@ public class Puzzlescript2 : MonoBehaviour
         Invoke(nameof(HideUI), 5);
 
         //Set the color to match the active game object.
-        ojectiveText.color = Color.red;
+        ojectiveText.color = Color.magenta;
     }
 
     // Update is called once per frame
@@ -138,7 +138,7 @@ public class Puzzlescript2 : MonoBehaviour
             characterText.text = "Can you find the number 5?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "5";
-            ojectiveText.color = Color.black;
+            ojectiveText.color = Color.cyan;
         }
 
         if (currentLevel == 6)
@@ -148,7 +148,7 @@ public class Puzzlescript2 : MonoBehaviour
             characterText.text = "Can you find the number 6?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "6";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.green;
         }
 
         if (currentLevel == 7)

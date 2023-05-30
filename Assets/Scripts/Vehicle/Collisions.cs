@@ -957,7 +957,7 @@ public class Collisions : MonoBehaviour
             if (InstantiateBool == true)
             {
                 //Spawn 20
-                Spawner.Items = 19;
+                Spawner.Items = 18;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
             }

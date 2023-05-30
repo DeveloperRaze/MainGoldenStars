@@ -127,7 +127,7 @@ public class PuzzleScript3 : MonoBehaviour
             characterText.text = "Can you find the number 7?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "7";
-            ojectiveText.color = Color.magenta;
+            ojectiveText.color = Color.red;
         }
 
         if (currentLevel == 8)
@@ -139,7 +139,7 @@ public class PuzzleScript3 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "8";
-            ojectiveText.color = Color.black;
+            ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 9)
@@ -158,7 +158,7 @@ public class PuzzleScript3 : MonoBehaviour
             characterText.text = "Can you find the number 10?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "10";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.magenta;
         }
 
         if (currentLevel == 11)

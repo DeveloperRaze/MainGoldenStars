@@ -172,7 +172,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
 
             mainCamera.enabled = false;
             secondCamera.enabled = true;
-            characterText.text = "Well done! We have finished all the levels!";
+            characterText.text = "Well done! We have finished the game!!";
 
             triggerTree.SetTrigger();
 
