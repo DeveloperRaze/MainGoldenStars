@@ -97,10 +97,13 @@ public class GameSessionHandler : MonoBehaviour
         }
         if (starCount == 2)
         {
+            star1.SetActive(true);
             star2.SetActive(true);
         }
         if (starCount == 3)
         {
+            star1.SetActive(true);
+            star2.SetActive(true);
             star3.SetActive(true);
         }
         if (starCount == 4)

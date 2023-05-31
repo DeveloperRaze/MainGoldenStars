@@ -74,7 +74,6 @@ public class Puzzlescript6 : MonoBehaviour
         CharacterTexts();
         FadeIn();
 
-        Debug.Log("SecondsPassed" + SecondsPassed);
         //If timer on then start counting.
         if (TimerOn == true)
         {
