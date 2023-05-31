@@ -7,36 +7,82 @@ public class StopTutorialAnimation : MonoBehaviour
     //This script will stop the flashing go button at start of game.
     [SerializeField] GameObject Gas;
     [SerializeField] GameObject Brake;
+    [SerializeField] GameObject TurnLeft;
+    [SerializeField] GameObject TurnRight;
 
     public bool TutorialBool = true;
 
+    //Time in seconds = 0.
+    float SecondsPassed = 0f;
+    //Delay of 1 second.
+    float DelayAmount = 1f;
+    //Timer Float.
+    protected float Timer;
+    //Timer bool.
+    public bool TimerOn = false;
+
+    private void Start()
+    {
+        TimerOn = true;
+        //Start Go animation on up button
+        Gas.GetComponent<Animator>().enabled = true;
+    }
+
     private void Update()
     {
-        if (TutorialBool == true)
+        //If timer on then start counting.
+        if (TimerOn == true)
         {
-            //Stops the flashing object after 4 seconds.
-            Invoke(nameof(StopGoAnimations), 4);
+            Timer += Time.deltaTime;
+        }
+        //If timer greater than 1 second, set to 0
+        if (Timer >= DelayAmount)
+        {
+            Timer = 0f;
+            SecondsPassed++;
+        }
 
-            //Starts the second animation - Brake flash, after 6 seconds.
-            Invoke(nameof(BrakeDelay), 6);
+        //Stop flash animation on up button
+        if (SecondsPassed == 5)
+        {
+            Gas.GetComponent<Animator>().enabled = false;
+        }
+
+        //Start flash animation on stop button
+        if (SecondsPassed == 7)
+        {
+            Brake.GetComponent<Animator>().enabled = true;
+        }
+
+        //Stop flash animation on stop button
+        if (SecondsPassed == 12)
+        {
+            Brake.GetComponent<Animator>().enabled = false;
+        }
+
+        //Start flash animation on turn buttons
+        if (SecondsPassed == 14)
+        {
+            TurnLeft.GetComponent<Animator>().enabled = true;
+            TurnRight.GetComponent<Animator>().enabled = true;
+        }
+
+        //Stop flash animation on turn buttons
+        if (SecondsPassed == 19)
+        {
+            TurnLeft.GetComponent<Animator>().enabled = false;
+            TurnRight.GetComponent<Animator>().enabled = false;
+        }
+
+        //Destroy animator so does not replay on start
+        if (SecondsPassed == 21)
+        {
+            DestroyAnims();
         }
     }
 
-    private void BrakeDelay()
+    private void DestroyAnims()
     {
-        Brake.GetComponent<Animator>().enabled = true;
-        Invoke(nameof(StopBrakeAnimations), 7);
-    }
-
-    private void StopGoAnimations()
-    {
-        Gas.GetComponent<Animator>().enabled = false;
-        TutorialBool = false;
-    }
-
-    private void StopBrakeAnimations()
-    {
-        Brake.GetComponent<Animator>().enabled = false;
-
+        Destroy(this);
     }
 }

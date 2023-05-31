@@ -10,22 +10,89 @@ public class TutorialFader : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ojectiveText;
 
     [SerializeField] public bool fadeIn = false;
-    [SerializeField] public bool fadeOut = false;
+    [SerializeField] public bool fadeOut = false; 
 
-    private bool FirstTutorial = true;
-    private bool SecondTutorial = false;
+    public float Tutorialnumber = 1;
+
+    //Time in seconds = 0.
+    float SecondsPassed = 0f;
+    //Delay of 1 second.
+    float DelayAmount = 1f;
+    //Timer Float.
+    protected float Timer;
+    //Timer bool.
+    public bool TimerOn = false;
 
     public void Start()
     {
-        //Make Character text visible at start.
-        if (FirstTutorial == true)
+        TimerOn = true;
+        Tutorialnumber = 1;
+    }
+
+    public void Update()
+    {
+        FadeIn();
+
+        //If timer on then start counting.
+        if (TimerOn == true)
         {
+            Timer += Time.deltaTime;
+        }
+        //If timer greater than 1 second, set to 0
+        if (Timer >= DelayAmount)
+        {
+            Timer = 0f;
+            SecondsPassed++;
+        }
+
+        if (SecondsPassed == 5)
+        {
+            HideUI();
+        }
+
+        if (SecondsPassed == 7)
+        {
+            Tutorialnumber = 2;
             ShowUI();
+        }
+
+        if (SecondsPassed == 12)
+        {
+            HideUI();
+        }
+
+        if (SecondsPassed == 14)
+        {
+            Tutorialnumber = 3;
+            ShowUI();
+        }
+
+        //This is how long the text displays before disappearing (10 seconds).
+        if (SecondsPassed == 19)
+        {
+            HideUI();
+        }
+
+        //Remove the script after tutorial has played.
+        if (SecondsPassed == 21)
+        {
+            DestroyFader();
+        }
+
+        if (Tutorialnumber == 1)
+        {
             ojectiveText.text = "Press the UP button to go forwards.";
         }
 
-        //Hides the Character text after 4 seconds.
-        Invoke(nameof(HideUI), 4);
+        if (Tutorialnumber == 2)
+        {
+            ojectiveText.text = "Press the Down button to stop or go backwards.";
+        }
+
+        if (Tutorialnumber == 3)
+        {
+            ojectiveText.text = "Press the Left and Right buttons to turn.";
+        }
     }
 
     public void ShowUI()
@@ -36,13 +103,6 @@ public class TutorialFader : MonoBehaviour
     public void HideUI()
     {
         fadeOut = true;
-    }
-
-    public void Update()
-    {
-        FadeIn();
-        Invoke(nameof(ShowSecondTutorial), 6);
-        Invoke(nameof(HideSecondTutorial), 10);
     }
 
     public void FadeIn()
@@ -80,27 +140,6 @@ public class TutorialFader : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void ShowSecondTutorial()
-    {
-        FirstTutorial = false;
-        SecondTutorial = true;
-
-
-        if (SecondTutorial == true)
-        {
-            ShowUI();
-            ojectiveText.text = "Press the DOWN button to stop.";
-        }
-    }
-
-    private void HideSecondTutorial()
-    {
-        fadeIn = false;
-        HideUI();
-        SecondTutorial = false;
-        Invoke(nameof(DestroyFader), 5);
     }
 
     private void DestroyFader()
