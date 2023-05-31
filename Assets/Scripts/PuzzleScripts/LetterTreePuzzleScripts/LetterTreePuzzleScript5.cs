@@ -71,7 +71,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
         Invoke(nameof(HideUI), 5);
 
         //Set the color to match the active game object.
-        ojectiveText.color = Color.red;
+        ojectiveText.color = Color.blue;
     }
 
     // Update is called once per frame
@@ -135,7 +135,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             characterText.text = "Can you find the letter V?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "V";
-            ojectiveText.color = Color.yellow;
+            ojectiveText.color = Color.magenta;
         }
 
         if (currentLevel == 23)
@@ -143,7 +143,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             characterText.text = "Can you find the letter W?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "W";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.cyan;
         }
 
         if (currentLevel == 24)
@@ -154,7 +154,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "X";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.green;
         }
 
         if (currentLevel == 25)
@@ -162,7 +162,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             characterText.text = "Can you find the letter Y?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "Y";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.red;
         }
 
         if (currentLevel == 26)
@@ -170,7 +170,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             characterText.text = "Can you find the letter Z?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "Z";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 27)

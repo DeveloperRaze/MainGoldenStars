@@ -156,7 +156,7 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
 
             //Objective UI changes to match the objective.
             ojectiveText.text = "D";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.magenta;
         }
 
         if (currentLevel == 5f)
@@ -164,7 +164,7 @@ public class LetterTreePuzzleScript1 : MonoBehaviour
             characterText.text = "Can you find the letter E?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "E";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.cyan;
         }
 
         if (currentLevel == 6f)

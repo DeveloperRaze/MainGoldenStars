@@ -72,7 +72,7 @@ public class LetterTreePuzzleScript2 : MonoBehaviour
         Invoke(nameof(HideUI), 5);
 
         //Set the color to match the active game object.
-        ojectiveText.color = Color.red;
+        ojectiveText.color = Color.green;
     }
 
     // Update is called once per frame
@@ -136,7 +136,7 @@ public class LetterTreePuzzleScript2 : MonoBehaviour
             characterText.text = "Can you find the letter G?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "G";
-            ojectiveText.color = Color.yellow;
+            ojectiveText.color = Color.red;
         }
 
         if (currentLevel == 8f)
@@ -144,7 +144,7 @@ public class LetterTreePuzzleScript2 : MonoBehaviour
             characterText.text = "Can you find the letter H?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "H";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 9f)
@@ -163,7 +163,7 @@ public class LetterTreePuzzleScript2 : MonoBehaviour
             characterText.text = "Can you find the letter J?";
             //Objective UI changes to match the objective.
             ojectiveText.text = "J";
-            ojectiveText.color = Color.blue;
+            ojectiveText.color = Color.magenta;
         }
 
         if (currentLevel == 11f)

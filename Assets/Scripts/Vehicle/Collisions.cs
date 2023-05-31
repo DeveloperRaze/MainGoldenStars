@@ -19,7 +19,7 @@ public class Collisions : MonoBehaviour
         //Level 1-1 Number tree count 1-10. (1-3
         //Check for a match with the specified name on any GameObject that collides with Vehicle
 
-        // If gameobject != "1"...
+        // This gigantic code should be re-written and each game object should have it's own version of the collision event attached to it.
 
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 1)
         {
@@ -33,7 +33,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 1)
         {
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
 
             InstantiateBool = true;
@@ -50,7 +50,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "3(Clone)" && currentLevel == 1)
         {
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
 
             InstantiateBool = true;
@@ -69,7 +69,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 2)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -91,7 +91,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "3(Clone)" && currentLevel == 2)
         {
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
@@ -108,7 +108,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "1(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -123,7 +123,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "2(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("Oops");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -138,7 +138,8 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "3(Clone)" && currentLevel == 3)
         {
             //If correct object was destroyed then move to next object.
-            
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
+
             GetComponent<PuzzleScript>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -158,7 +159,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "5(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -173,7 +174,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "6(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -189,7 +190,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "4(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -213,7 +214,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "6(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -229,7 +230,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "4(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -244,7 +245,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "5(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -259,7 +260,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "6(Clone)" && currentLevel == 6)
         {
             //If correct object was destroyed then move to next object.
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<Puzzlescript2>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -278,7 +279,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "8(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -292,7 +293,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "9(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -306,7 +307,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "10(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -321,7 +322,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -344,7 +345,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "9(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -359,7 +360,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "10(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -374,7 +375,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -389,7 +390,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "8(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -413,7 +414,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "10(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
             if (InstantiateBool == true)
@@ -428,7 +429,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "7(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -443,7 +444,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "8(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -458,7 +459,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "9(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<PuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -474,7 +475,7 @@ public class Collisions : MonoBehaviour
         {
             //  Either end scene or continue to 1-11?
             //If correct object was destroyed then move to next object.
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
 
             GetComponent<PuzzleScript3>().NextLevel();
             currentLevel++;
@@ -494,7 +495,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "12(Clone)" && currentLevel == 11)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -511,8 +512,8 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "13(Clone)" && currentLevel == 11)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -528,7 +529,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "11(Clone)" && currentLevel == 12)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -554,8 +555,8 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "13(Clone)" && currentLevel == 12)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -571,7 +572,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "11(Clone)" && currentLevel == 13)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -588,8 +589,8 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "12(Clone)" && currentLevel == 13)
         {
             GetComponent<Puzzlescript4>().DisplayWrongObjectText();
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -603,7 +604,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "13(Clone)" && currentLevel == 13)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<Puzzlescript4>().NextLevel();
 
             currentLevel++;
@@ -624,7 +625,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "15(Clone)" && currentLevel == 14)
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -642,7 +643,7 @@ public class Collisions : MonoBehaviour
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -658,7 +659,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "14(Clone)" && currentLevel == 15)
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -685,7 +686,7 @@ public class Collisions : MonoBehaviour
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -701,7 +702,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "14(Clone)" && currentLevel == 16)
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             InstantiateBool = true;
             Destroy(collision.gameObject);
 
@@ -719,7 +720,7 @@ public class Collisions : MonoBehaviour
         {
             GetComponent<Puzzlescript5>().DisplayWrongObjectText();
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -733,13 +734,12 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "16(Clone)" && currentLevel == 16)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             currentLevel++;
             Destroy(collision.gameObject);
 
             GetComponent<Puzzlescript5>().NextLevel();
         }
-
 
         //Level 1-17 (numbers 17-20) (17)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 17)
@@ -752,9 +752,9 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "18(Clone)" && currentLevel == 17)
         {
-            InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
+            InstantiateBool = true;
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -768,9 +768,9 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "19(Clone)" && currentLevel == 17)
         {
-            InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
+            InstantiateBool = true;
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -784,9 +784,9 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "20(Clone)" && currentLevel == 17)
         {
-            InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
+            InstantiateBool = true;
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -802,9 +802,9 @@ public class Collisions : MonoBehaviour
         //Level 1-18 (18)
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 18)
         {
-            InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
+            InstantiateBool = true;
             Destroy(collision.gameObject);
 
             if (InstantiateBool == true)
@@ -827,7 +827,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "19(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -843,7 +843,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "20(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -861,7 +861,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -877,7 +877,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "18(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -901,7 +901,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "20(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -918,7 +918,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "17(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -934,7 +934,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "18(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -950,7 +950,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "19(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<Puzzlescript6>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -965,13 +965,11 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "20(Clone)" && currentLevel == 20)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             currentLevel++;
             Destroy(collision.gameObject);
             GetComponent<Puzzlescript6>().NextLevel();
         }      
-
-
 
 
         // Level 2-1 (A-E) A
@@ -990,7 +988,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "B(Clone)" && currentLevel == 1)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1006,7 +1004,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "C(Clone)" && currentLevel == 1)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1022,7 +1020,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "D(Clone)" && currentLevel == 1)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1039,7 +1037,7 @@ public class Collisions : MonoBehaviour
         {
             //If Instantiate is true (to limit event to one occurance)
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             //Set text component
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             //Destroy object
@@ -1059,7 +1057,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "A(Clone)" && currentLevel == 2)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1087,7 +1085,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "C(Clone)" && currentLevel == 2)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1103,7 +1101,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "D(Clone)" && currentLevel == 2)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1120,7 +1118,7 @@ public class Collisions : MonoBehaviour
         {
             //If Instantiate is true (to limit event to one occurance)
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             //Set text component
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             //Destroy object
@@ -1140,7 +1138,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "A(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1156,7 +1154,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "B(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1184,7 +1182,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "D(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1200,7 +1198,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "E(Clone)" && currentLevel == 3)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1217,7 +1215,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "A(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1233,7 +1231,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "B(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1249,7 +1247,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "C(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1277,7 +1275,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "E(Clone)" && currentLevel == 4)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1294,7 +1292,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "A(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1309,7 +1307,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "B(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1324,7 +1322,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "C(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1339,7 +1337,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "D(Clone)" && currentLevel == 5)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript1>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1359,7 +1357,7 @@ public class Collisions : MonoBehaviour
             //Increase level by 1
             //Destroy correct gameObject.
 
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<LetterTreePuzzleScript1>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -1378,7 +1376,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "G(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1393,7 +1391,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "H(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1408,7 +1406,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "I(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1424,7 +1422,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "J(Clone)" && currentLevel == 6)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1440,7 +1438,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "F(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1463,7 +1461,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "H(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1478,7 +1476,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "I(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1494,7 +1492,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "J(Clone)" && currentLevel == 7)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1511,7 +1509,7 @@ public class Collisions : MonoBehaviour
         {
 
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1526,7 +1524,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "G(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1549,7 +1547,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "I(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1565,7 +1563,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "J(Clone)" && currentLevel == 8)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1581,7 +1579,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "F(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1597,7 +1595,7 @@ public class Collisions : MonoBehaviour
         {
 
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1613,7 +1611,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "H(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1637,7 +1635,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "J(Clone)" && currentLevel == 9)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1653,7 +1651,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "F(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1669,7 +1667,7 @@ public class Collisions : MonoBehaviour
         {
 
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1685,7 +1683,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "H(Clone)" && currentLevel == 10)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1701,7 +1699,7 @@ public class Collisions : MonoBehaviour
         {
 
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript2>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1715,7 +1713,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "J(Clone)" && currentLevel == 10)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<LetterTreePuzzleScript2>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -1734,7 +1732,7 @@ public class Collisions : MonoBehaviour
         {
 
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1750,7 +1748,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "M(Clone)" && currentLevel == 11)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1765,7 +1763,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "N(Clone)" && currentLevel == 11)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1780,7 +1778,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "O(Clone)" && currentLevel == 11)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1796,7 +1794,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "K(Clone)" && currentLevel == 12)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1820,7 +1818,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "M(Clone)" && currentLevel == 12)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1835,7 +1833,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "N(Clone)" && currentLevel == 12)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1850,7 +1848,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "O(Clone)" && currentLevel == 12)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1866,7 +1864,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "K(Clone)" && currentLevel == 13)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1882,7 +1880,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "L(Clone)" && currentLevel == 13)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1905,7 +1903,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "N(Clone)" && currentLevel == 13)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1920,7 +1918,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "O(Clone)" && currentLevel == 13)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1936,7 +1934,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "K(Clone)" && currentLevel == 14)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -1952,7 +1950,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "L(Clone)" && currentLevel == 14)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1967,7 +1965,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "M(Clone)" && currentLevel == 14)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -1991,7 +1989,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "O(Clone)" && currentLevel == 14)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2007,7 +2005,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "K(Clone)" && currentLevel == 15)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2023,7 +2021,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "L(Clone)" && currentLevel == 15)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2038,7 +2036,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "M(Clone)" && currentLevel == 15)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2053,7 +2051,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "N(Clone)" && currentLevel == 15)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript3>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2068,7 +2066,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "O(Clone)" && currentLevel == 15)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<LetterTreePuzzleScript3>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -2087,7 +2085,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Q(Clone)" && currentLevel == 16)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2102,7 +2100,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "R(Clone)" && currentLevel == 16)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2117,7 +2115,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "S(Clone)" && currentLevel == 16)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2133,7 +2131,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "T(Clone)" && currentLevel == 16)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2151,7 +2149,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 17)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2174,7 +2172,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "R(Clone)" && currentLevel == 17)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2189,7 +2187,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "S(Clone)" && currentLevel == 17)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2205,7 +2203,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "T(Clone)" && currentLevel == 17)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2223,7 +2221,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2238,7 +2236,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Q(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2261,7 +2259,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "S(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2277,7 +2275,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "T(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2294,7 +2292,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2309,7 +2307,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Q(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2324,7 +2322,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "R(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2347,7 +2345,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "T(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2364,7 +2362,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2379,7 +2377,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Q(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2394,7 +2392,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "R(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2409,7 +2407,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "S(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript4>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2424,7 +2422,7 @@ public class Collisions : MonoBehaviour
 
         if (collision.gameObject.name == "T(Clone)" && currentLevel == 20)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<LetterTreePuzzleScript4>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
@@ -2442,7 +2440,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "V(Clone)" && currentLevel == 21)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2457,7 +2455,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "W(Clone)" && currentLevel == 21)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2472,7 +2470,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "X(Clone)" && currentLevel == 21)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2488,7 +2486,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Y(Clone)" && currentLevel == 21)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2504,7 +2502,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 21)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2521,7 +2519,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2544,7 +2542,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "W(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2559,7 +2557,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "X(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2575,7 +2573,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Y(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2591,7 +2589,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2608,7 +2606,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2623,7 +2621,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "V(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2649,7 +2647,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "X(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2665,7 +2663,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Y(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2681,7 +2679,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2698,7 +2696,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2713,7 +2711,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "V(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2728,7 +2726,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "W(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2752,7 +2750,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Y(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2768,7 +2766,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2785,7 +2783,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2800,7 +2798,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "V(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2815,7 +2813,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "W(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2831,7 +2829,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "X(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2855,7 +2853,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2872,7 +2870,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2887,7 +2885,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "V(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
             Destroy(collision.gameObject);
 
@@ -2902,7 +2900,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "W(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2918,7 +2916,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "X(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2934,7 +2932,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.name == "Y(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
-            FindObjectOfType<AudioManager>().Play("WrongObjective");
+            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
             GetComponent<LetterTreePuzzleScript5>().DisplayWrongObjectText();
 
             Destroy(collision.gameObject);
@@ -2949,13 +2947,11 @@ public class Collisions : MonoBehaviour
            
         if (collision.gameObject.name == "Z(Clone)" && currentLevel == 26)
         {
-            FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
+            FindObjectOfType<AudioManager>().Play("CompletedLevelFX");
             GetComponent<LetterTreePuzzleScript5>().NextLevel();
             currentLevel++;
             Destroy(collision.gameObject);
-
         }
-
     }
 }
 

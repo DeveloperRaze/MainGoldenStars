@@ -67,7 +67,7 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
   - name: ObjectiveCompleted
-    clip: {fileID: 8300000, guid: 033d7d880704ce543b6521ab5a7412b1, type: 3}
+    clip: {fileID: 8300000, guid: c323629c803be0242bed6d9209043727, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
   - name: CompletedLevelFX
-    clip: {fileID: 8300000, guid: 16fc3e0bfbb65fb45a5a409e035ad2e2, type: 3}
+    clip: {fileID: 8300000, guid: 14cca527d9c65ab4a8203f0b69a4afd9, type: 3}
     volume: 1
     pitch: 1
     loop: 0
