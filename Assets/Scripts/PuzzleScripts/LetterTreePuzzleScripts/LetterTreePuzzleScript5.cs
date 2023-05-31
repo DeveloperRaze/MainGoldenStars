@@ -62,7 +62,7 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
         currentLevel = 21;
 
         //Set text to story.
-        characterText.text = "Can you find the letter P?";
+        characterText.text = "Can you find the letter U?";
 
         //Make Character text visible at start.
         ShowUI();
@@ -132,17 +132,17 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
             AddStar19();
 
             //Set text to second objective
-            characterText.text = "Can you find the letter L?";
+            characterText.text = "Can you find the letter V?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "L";
+            ojectiveText.text = "V";
             ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 23)
         {
-            characterText.text = "Can you find the letter M?";
+            characterText.text = "Can you find the letter W?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "M";
+            ojectiveText.text = "W";
             ojectiveText.color = Color.blue;
         }
 
@@ -150,22 +150,30 @@ public class LetterTreePuzzleScript5 : MonoBehaviour
         {
             Star2.SetActive(true);
             AddStar20();
-            characterText.text = "Can you find the letter N?";
+            characterText.text = "Can you find the letter X?";
 
             //Objective UI changes to match the objective.
-            ojectiveText.text = "N";
+            ojectiveText.text = "X";
             ojectiveText.color = Color.blue;
         }
 
         if (currentLevel == 25)
         {
-            characterText.text = "Can you find the letter O?";
+            characterText.text = "Can you find the letter Y?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "O";
+            ojectiveText.text = "Y";
             ojectiveText.color = Color.blue;
         }
 
         if (currentLevel == 26)
+        {
+            characterText.text = "Can you find the letter Z?";
+            //Objective UI changes to match the objective.
+            ojectiveText.text = "Z";
+            ojectiveText.color = Color.blue;
+        }
+
+        if (currentLevel == 27)
         {
             Star3.SetActive(true);
             AddStar21();

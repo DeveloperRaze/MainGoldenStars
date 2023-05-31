@@ -133,17 +133,17 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
             AddStar19();
 
             //Set text to second objective
-            characterText.text = "Can you find the letter L?";
+            characterText.text = "Can you find the letter Q?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "L";
+            ojectiveText.text = "Q";
             ojectiveText.color = Color.yellow;
         }
 
         if (currentLevel == 18)
         {
-            characterText.text = "Can you find the letter M?";
+            characterText.text = "Can you find the letter R?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "M";
+            ojectiveText.text = "R";
             ojectiveText.color = Color.blue;
         }
 
@@ -151,18 +151,18 @@ public class LetterTreePuzzleScript4 : MonoBehaviour
         {
             Star2.SetActive(true);
             AddStar20();
-            characterText.text = "Can you find the letter N?";
+            characterText.text = "Can you find the letter S?";
 
             //Objective UI changes to match the objective.
-            ojectiveText.text = "N";
+            ojectiveText.text = "S";
             ojectiveText.color = Color.blue;
         }
 
         if (currentLevel == 20)
         {
-            characterText.text = "Can you find the letter O?";
+            characterText.text = "Can you find the letter T?";
             //Objective UI changes to match the objective.
-            ojectiveText.text = "O";
+            ojectiveText.text = "T";
             ojectiveText.color = Color.blue;
         }
 

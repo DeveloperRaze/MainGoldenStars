@@ -1803,7 +1803,7 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Spawner.Items = 11;
+                Spawner.Items = 10;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
             }
@@ -2003,7 +2003,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-14 (K-O) O
+        // Level 2-15 (K-O) O
         if (collision.gameObject.name == "K(Clone)" && currentLevel == 15)
         {
             InstantiateBool = true;
@@ -2075,7 +2075,7 @@ public class Collisions : MonoBehaviour
         }
 
 
-        // Level 2-15 (P-T) P
+        // Level 2-16 (P-T) P
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 16)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
@@ -2147,7 +2147,7 @@ public class Collisions : MonoBehaviour
 
         }
 
-        // Level 2-15 (P-T) Q
+        // Level 2-17 (P-T) Q
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 17)
         {
             InstantiateBool = true;
@@ -2219,7 +2219,7 @@ public class Collisions : MonoBehaviour
 
         }
 
-        // Level 2-15 (P-T) R
+        // Level 2-18 (P-T) R
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 18)
         {
             InstantiateBool = true;
@@ -2290,7 +2290,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (P-T) S
+        // Level 2-19 (P-T) S
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 19)
         {
             InstantiateBool = true;
@@ -2360,7 +2360,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (P-T) T
+        // Level 2-20 (P-T) T
         if (collision.gameObject.name == "P(Clone)" && currentLevel == 20)
         {
             InstantiateBool = true;
@@ -2430,7 +2430,7 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        // Level 2-15 (U-Z) U
+        // Level 2-21 (U-Z) U
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 21)
         {
             FindObjectOfType<AudioManager>().Play("ObjectiveCompleted");
@@ -2517,7 +2517,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (U-Z) V
+        // Level 2-22 (U-Z) V
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 22)
         {
             InstantiateBool = true;
@@ -2604,7 +2604,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (U-Z) W
+        // Level 2-23 (U-Z) W
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 23)
         {
             InstantiateBool = true;
@@ -2694,7 +2694,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (U-Z) X
+        // Level 2-24 (U-Z) X
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 24)
         {
             InstantiateBool = true;
@@ -2781,7 +2781,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (U-Z) Y
+        // Level 2-25 (U-Z) Y
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 25)
         {
             InstantiateBool = true;
@@ -2868,7 +2868,7 @@ public class Collisions : MonoBehaviour
             }
         }
 
-        // Level 2-15 (U-Z) Z
+        // Level 2-26 (U-Z) Z
         if (collision.gameObject.name == "U(Clone)" && currentLevel == 26)
         {
             InstantiateBool = true;
