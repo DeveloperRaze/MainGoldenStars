@@ -535,8 +535,6 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Debug.Log("Working");
-                //Spawn number 11
                 Spawner.Items = 10;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
@@ -578,8 +576,6 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Debug.Log("Working");
-                //Spawn number 11
                 Spawner.Items = 10;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
@@ -631,7 +627,6 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Debug.Log("Working");
                 //Spawn number 15
                 Spawner.Items = 14;
                 Spawner.InstantiateObjects();
@@ -665,7 +660,6 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Debug.Log("Working");
                 //Spawn number 14
                 Spawner.Items = 13;
                 Spawner.InstantiateObjects();
@@ -708,7 +702,6 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                Debug.Log("Working");
                 //Spawn number 14
                 Spawner.Items = 13;
                 Spawner.InstantiateObjects();
@@ -956,7 +949,7 @@ public class Collisions : MonoBehaviour
 
             if (InstantiateBool == true)
             {
-                //Spawn 20
+                //Spawn 19
                 Spawner.Items = 18;
                 Spawner.InstantiateObjects();
                 InstantiateBool = false;
