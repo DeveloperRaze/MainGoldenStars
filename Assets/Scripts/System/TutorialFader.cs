@@ -13,6 +13,7 @@ public class TutorialFader : MonoBehaviour
     [SerializeField] public bool fadeOut = false; 
 
     public float Tutorialnumber = 1;
+    public bool isPlaying;
 
     //Time in seconds = 0.
     float SecondsPassed = 0f;
@@ -23,26 +24,50 @@ public class TutorialFader : MonoBehaviour
     //Timer bool.
     public bool TimerOn = false;
 
-    public void Start()
+    //Start counter
+    public void StartTimer()
     {
-        TimerOn = true;
-        Tutorialnumber = 1;
+        if (isPlaying == false)
+        {
+            isPlaying = true;
+        }
+    }
+
+    public void start()
+    {
+        HideUI();
     }
 
     public void Update()
     {
         FadeIn();
+        if (isPlaying == true)
+        {
+            StartTutorial();
+        }
+    }
+
+    public void StartTutorial()
+    {
+        Tutorialnumber = 1;
+        TimerOn = true;
 
         //If timer on then start counting.
         if (TimerOn == true)
         {
             Timer += Time.deltaTime;
         }
+
         //If timer greater than 1 second, set to 0
         if (Timer >= DelayAmount)
         {
             Timer = 0f;
             SecondsPassed++;
+        }
+
+        if (SecondsPassed == 1)
+        {
+            ShowUI();
         }
 
         if (SecondsPassed == 5)
@@ -91,6 +116,8 @@ public class TutorialFader : MonoBehaviour
 
         if (Tutorialnumber == 3)
         {
+            TimerOn = false;
+            isPlaying = false;
             ojectiveText.text = "Press the Left and Right buttons to turn.";
         }
     }

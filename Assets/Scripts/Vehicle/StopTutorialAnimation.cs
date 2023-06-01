@@ -10,7 +10,7 @@ public class StopTutorialAnimation : MonoBehaviour
     [SerializeField] GameObject TurnLeft;
     [SerializeField] GameObject TurnRight;
 
-    public bool TutorialBool = true;
+    public bool TutorialBool;
 
     //Time in seconds = 0.
     float SecondsPassed = 0f;
@@ -31,15 +31,18 @@ public class StopTutorialAnimation : MonoBehaviour
     private void Update()
     {
         //If timer on then start counting.
-        if (TimerOn == true)
+        if (TutorialBool == true)
         {
-            Timer += Time.deltaTime;
-        }
-        //If timer greater than 1 second, set to 0
-        if (Timer >= DelayAmount)
-        {
-            Timer = 0f;
-            SecondsPassed++;
+            if (TimerOn == true)
+            {
+                Timer += Time.deltaTime;
+            }
+            //If timer greater than 1 second, set to 0
+            if (Timer >= DelayAmount)
+            {
+                Timer = 0f;
+                SecondsPassed++;
+            }
         }
 
         //Stop flash animation on up button
